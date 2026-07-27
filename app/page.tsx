@@ -135,7 +135,7 @@ export default function Home() {
               <div><strong>Desde $100</strong><span>por hora + IVA</span><small>Reserva flexible</small></div>
             </div>
             <div className="solution-features">
-              <span>Wi‑Fi</span><span>Pantalla</span><span>Pizarrón</span><span>Apple TV y HDMI</span>
+              <span>Wi‑Fi</span><span>Pantalla</span><span>Pizarrón</span><span>HDMI</span>
             </div>
             <div className="solution-actions">
               <a className="button primary" href="/salas-de-juntas">Ver capacidades y precios <span>↗</span></a>

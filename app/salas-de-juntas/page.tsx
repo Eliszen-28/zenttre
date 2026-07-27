@@ -21,7 +21,7 @@ export default function SalasDeJuntasPage() {
       benefits={[
         { title: "Acceso permanente", text: "Acceso 24/7 los 365 días del año." },
         { title: "Servicios adicionales", text: "Bebidas, copiado, impresiones y escaneo disponibles con costo adicional." },
-        { title: "Conectividad", text: "Apple TV y HDMI en las salas que cuentan con pantalla." },
+        { title: "Conectividad", text: "HDMI en las salas que cuentan con pantalla." },
         { title: "Distintas capacidades", text: "Opciones para reuniones de 3, 4 y hasta 10 personas." },
       ]}
       plans={[
@@ -33,7 +33,7 @@ export default function SalasDeJuntasPage() {
         { eyebrow: "MÁXIMO 3 PERSONAS", title: "Sala B1", image: "/images/salas/sala-b1.jpg", description: "Franjas orgánicas estilo bambú para reuniones confidenciales, con estilo y frescura.", price: "$150.00 por hora + IVA" },
         { eyebrow: "MÁXIMO 3 PERSONAS", title: "Sala B2", image: "/images/salas/sala-b2.jpg", description: "Franjas orgánicas estilo bambú para reuniones confidenciales, con estilo y frescura.", price: "$150.00 por hora + IVA" },
       ]}
-      footnotes={["Los servicios de bebidas, copiado, impresiones y escaneo tienen costo adicional.", "Apple TV y HDMI están disponibles en salas con pantalla."]}
+      footnotes={["Los servicios de bebidas, copiado, impresiones y escaneo tienen costo adicional.", "HDMI está disponible en salas con pantalla."]}
     />
   );
 }
