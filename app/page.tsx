@@ -103,9 +103,9 @@ export default function Home() {
           <strong>Encuentra el espacio ideal para ti</strong>
         </div>
         <div className="finder-options">
-          <a href="#oficinas"><span>⌂</span> Oficina privada</a>
-          <a href="#salas"><span>◫</span> Sala de juntas</a>
-          <a href="#virtual"><span>◎</span> Oficina virtual</a>
+          <a href="#oficinas-privadas"><span>⌂</span> Oficina privada</a>
+          <a href="#salas-de-juntas"><span>◫</span> Sala de juntas</a>
+          <a href="#domicilio-empresas"><span>◎</span> Domicilio empresarial</a>
         </div>
         <a className="finder-go" href="#contacto" aria-label="Comenzar búsqueda">→</a>
       </section>
@@ -141,6 +141,96 @@ export default function Home() {
             </div>
           </article>
         ))}
+      </section>
+
+      <section className="solution-details" aria-label="Soluciones de trabajo Zenttre">
+        <article className="solution-panel" id="oficinas-privadas">
+          <div className="solution-visual">
+            <img src="/images/04.jpg" alt="Oficina privada equipada en Zenttre" />
+            <div className="solution-index"><span>01</span> OFICINAS PRIVADAS</div>
+          </div>
+          <div className="solution-content">
+            <p className="eyebrow">TU ESPACIO, TU EQUIPO</p>
+            <h2>Oficinas privadas, luminosas y listas para <em>crecer contigo.</em></h2>
+            <p className="solution-intro">
+              Un espacio profesional que puedes hacer tuyo desde el primer día.
+              Mobiliario, servicios y atención incluidos para que tu equipo se
+              concentre en lo que realmente importa.
+            </p>
+            <div className="solution-benefits">
+              <div><span>↗</span><p><strong>Acceso todos los días</strong>Disponibilidad 24/7, los 365 días del año.</p></div>
+              <div><span>↗</span><p><strong>Todo incluido</strong>Wi‑Fi, limpieza, seguridad y áreas comunes.</p></div>
+              <div><span>↗</span><p><strong>Espacios a la medida</strong>Opciones para equipos desde 2 hasta 10 personas.</p></div>
+            </div>
+            <div className="solution-actions">
+              <a className="button primary" href="#contacto">Cotizar una oficina <span>↗</span></a>
+              <a className="text-link" href="tel:+525520002619">Hablar con un asesor →</a>
+            </div>
+          </div>
+        </article>
+
+        <article className="solution-panel reverse" id="salas-de-juntas">
+          <div className="solution-visual">
+            <img src="/images/09.jpg" alt="Sala de juntas equipada en Zenttre" />
+            <div className="solution-index"><span>02</span> SALAS DE JUNTAS</div>
+          </div>
+          <div className="solution-content">
+            <p className="eyebrow">REUNIONES QUE AVANZAN</p>
+            <h2>El espacio indicado para cada conversación <em>importante.</em></h2>
+            <p className="solution-intro">
+              Salas privadas con distintas capacidades y personalidades para
+              recibir clientes, presentar proyectos o trabajar con tu equipo
+              por hora, sin rentar una oficina completa.
+            </p>
+            <div className="meeting-types">
+              <div><strong>Hasta 4</strong><span>personas</span><small>Reuniones breves</small></div>
+              <div><strong>Hasta 10</strong><span>personas</span><small>Juntas y presentaciones</small></div>
+              <div><strong>Desde $100</strong><span>por hora + IVA</span><small>Reserva flexible</small></div>
+            </div>
+            <div className="solution-features">
+              <span>Wi‑Fi</span><span>Pantalla</span><span>Pizarrón</span><span>Apple TV y HDMI</span>
+            </div>
+            <div className="solution-actions">
+              <a className="button primary" href="#contacto">Reservar una sala <span>↗</span></a>
+              <a className="text-link" href="https://wa.me/525579250612" target="_blank" rel="noreferrer">Consultar disponibilidad →</a>
+            </div>
+          </div>
+        </article>
+
+        <article className="solution-panel domicile" id="domicilio-empresas">
+          <div className="solution-visual">
+            <img src="/images/01.jpg" alt="Recepción profesional de Zenttre en la Colonia del Valle" />
+            <div className="solution-index"><span>03</span> DOMICILIO EMPRESARIAL</div>
+          </div>
+          <div className="solution-content">
+            <p className="eyebrow">PRESENCIA PROFESIONAL EN CDMX</p>
+            <h2>Domicilio fiscal y comercial para <em>tu empresa.</em></h2>
+            <p className="solution-intro">
+              Dale a tu negocio una dirección profesional en la Colonia del
+              Valle, con un equipo que recibe tus documentos y atiende tus
+              necesidades durante el horario de servicio.
+            </p>
+            <div className="plan-grid">
+              <div>
+                <small>PARA NUEVOS EMPRENDEDORES</small>
+                <h3>Domicilio Fiscal 1</h3>
+                <p>Dirección fiscal, Wi‑Fi en instalaciones y notificación de documentos por correo.</p>
+                <strong>Desde $880 <span>+ IVA / mes</span></strong>
+              </div>
+              <div>
+                <small>PARA MAYOR MOVIMIENTO</small>
+                <h3>Domicilio Fiscal 2</h3>
+                <p>Atención profesional para empresas con mayor recepción y operación documental.</p>
+                <strong>Desde $1,860 <span>+ IVA / mes</span></strong>
+              </div>
+            </div>
+            <p className="plan-note">6% de descuento en pago semestral · 12% de descuento en pago anual.</p>
+            <div className="solution-actions">
+              <a className="button primary" href="#contacto">Solicitar información <span>↗</span></a>
+              <a className="text-link" href="mailto:mensajes@zenttre.com">Revisar requisitos →</a>
+            </div>
+          </div>
+        </article>
       </section>
 
       <section className="benefits" id="nosotros">

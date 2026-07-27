@@ -96,6 +96,47 @@ h2 { font-size: clamp(42px, 5vw, 70px); max-width: 800px; }
 .service-tag { color: var(--teal); font-weight: 900; font-size: 10px; letter-spacing: .13em; text-transform: uppercase; }
 .service-copy a { display: inline-flex; gap: 18px; color: var(--link); font-size: 12px; font-weight: 900; margin-top: 18px; }
 
+.solution-details { border-top: 1px solid var(--line); }
+.solution-panel { display: grid; grid-template-columns: 50% 50%; min-height: 760px; scroll-margin-top: 30px; }
+.solution-panel.reverse .solution-visual { order: 2; }
+.solution-panel.reverse .solution-content { background: #f1f8f9; }
+.solution-panel.domicile .solution-content { background: var(--sky); }
+.solution-visual { position: relative; min-height: 680px; overflow: hidden; }
+.solution-visual img { transition: transform .7s ease; }
+.solution-panel:hover .solution-visual img { transform: scale(1.025); }
+.solution-index {
+  position: absolute; left: 0; bottom: 0; min-width: 265px; background: var(--white); color: var(--ink);
+  padding: 20px 26px; font-size: 10px; letter-spacing: .13em; font-weight: 900;
+}
+.solution-index span { color: var(--heading); margin-right: 24px; }
+.solution-content { padding: 90px 7vw; display: flex; flex-direction: column; justify-content: center; }
+.solution-content h2 { font-size: clamp(40px, 4.3vw, 65px); }
+.solution-intro { max-width: 620px; margin: 28px 0 34px; font-size: 15px; line-height: 1.8; }
+.solution-benefits { border-top: 1px solid var(--line); margin-bottom: 34px; }
+.solution-benefits > div {
+  display: grid; grid-template-columns: 28px 1fr; gap: 14px; padding: 17px 0; border-bottom: 1px solid var(--line);
+}
+.solution-benefits > div > span { color: var(--teal); font-size: 15px; }
+.solution-benefits p { margin: 0; font-size: 12px; line-height: 1.55; }
+.solution-benefits strong { display: block; color: var(--ink); font-size: 14px; margin-bottom: 2px; }
+.solution-actions { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
+.meeting-types { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid #c8dfe2; margin: 4px 0 24px; }
+.meeting-types > div { padding: 20px 16px; border-right: 1px solid #c8dfe2; }
+.meeting-types > div:last-child { border-right: 0; }
+.meeting-types strong { display: block; color: var(--ink); font-size: 20px; letter-spacing: -.03em; }
+.meeting-types span { display: block; color: var(--teal); font-size: 10px; font-weight: 800; margin: 4px 0 12px; }
+.meeting-types small { font-size: 9px; }
+.solution-features { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+.solution-features span { border: 1px solid #bdd7db; border-radius: 22px; padding: 8px 13px; color: var(--ink); font-size: 10px; font-weight: 700; }
+.plan-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 2px 0 15px; }
+.plan-grid > div { background: var(--white); padding: 25px; }
+.plan-grid small { color: var(--teal); font-size: 8px; letter-spacing: .11em; font-weight: 900; }
+.plan-grid h3 { font-size: 24px; margin: 12px 0; }
+.plan-grid p { font-size: 11px; line-height: 1.6; min-height: 54px; }
+.plan-grid > div > strong { color: var(--ink); font-size: 18px; }
+.plan-grid > div > strong span { color: var(--gray); font-size: 9px; font-weight: 400; }
+.plan-note { color: #36545c; font-size: 10px; font-weight: 700; margin: 0 0 30px; }
+
 .benefits { display: grid; grid-template-columns: 52% 48%; background: #eff7f8; }
 .benefit-image { position: relative; min-height: 760px; }
 .floating-card { position: absolute; right: -58px; top: 100px; background: var(--lime); color: var(--button-text); width: 170px; height: 170px; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
@@ -170,6 +211,10 @@ footer { background: var(--sky); border-top: 1px solid #70b4c1; padding: 75px 8v
   .finder-go { min-height: 65px; }
   .intro-grid, .spaces-heading { grid-template-columns: 1fr; gap: 30px; }
   .service-card { grid-template-columns: 50px 42% 1fr; }
+  .solution-panel { grid-template-columns: 1fr; }
+  .solution-panel.reverse .solution-visual { order: 0; }
+  .solution-visual { min-height: 560px; }
+  .solution-content { padding: 90px 8vw; }
   .benefits { grid-template-columns: 1fr; }
   .benefit-image { min-height: 570px; }
   .floating-card { right: 30px; }
@@ -193,6 +238,12 @@ footer { background: var(--sky); border-top: 1px solid #70b4c1; padding: 75px 8v
   .service-number { grid-row: 1 / 3; }
   .service-photo { min-height: 260px; margin: 0; }
   .service-copy { padding: 28px 0 18px; }
+  .solution-visual { min-height: 430px; }
+  .solution-content { padding: 75px 24px; }
+  .meeting-types { grid-template-columns: 1fr; }
+  .meeting-types > div { border-right: 0; border-bottom: 1px solid #c8dfe2; }
+  .meeting-types > div:last-child { border-bottom: 0; }
+  .plan-grid { grid-template-columns: 1fr; }
   .benefit-image { min-height: 460px; }
   .benefit-copy { padding: 90px 24px 80px; }
   .floating-card { width: 130px; height: 130px; right: 18px; top: 30px; }
