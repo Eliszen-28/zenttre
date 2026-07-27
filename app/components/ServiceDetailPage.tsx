@@ -15,6 +15,7 @@ type Plan = {
   price?: string;
   details?: string[];
   notice?: string;
+  image?: string;
 };
 
 type InformationSection = {
@@ -140,6 +141,11 @@ export default function ServiceDetailPage({
           <div className="detail-plan-grid">
             {plans.map((plan) => (
               <article key={plan.title}>
+                {plan.image && (
+                  <div className="detail-plan-image">
+                    <img src={plan.image} alt={`${plan.title} en Zenttre`} />
+                  </div>
+                )}
                 <small>{plan.eyebrow}</small>
                 <h3>{plan.title}</h3>
                 <p>{plan.description}</p>

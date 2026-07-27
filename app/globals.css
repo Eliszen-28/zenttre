@@ -256,6 +256,9 @@ footer { background: var(--sky); border-top: 1px solid #70b4c1; padding: 75px 8v
 .detail-plans-heading h2 { font-size: clamp(42px, 4.5vw, 65px); }
 .detail-plan-grid { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
 .detail-plan-grid article { min-height: 370px; padding: 48px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); display: flex; flex-direction: column; }
+.detail-plan-image { height: 260px; margin: -48px -48px 38px; overflow: hidden; }
+.detail-plan-image img { transition: transform .55s ease; }
+.detail-plan-grid article:hover .detail-plan-image img { transform: scale(1.025); }
 .detail-plan-grid small { color: var(--teal); font-size: 9px; font-weight: 900; letter-spacing: .12em; }
 .detail-plan-grid h3 { font-size: clamp(28px, 3vw, 42px); margin: 22px 0 18px; }
 .detail-plan-grid p { max-width: 480px; margin: 0 0 25px; line-height: 1.7; }
@@ -368,6 +371,7 @@ footer { background: var(--sky); border-top: 1px solid #70b4c1; padding: 75px 8v
   .detail-plans-heading, .detail-plan-grid { grid-template-columns: 1fr; }
   .detail-plans-heading { gap: 10px; }
   .detail-plan-grid article { min-height: 330px; padding: 34px 28px; }
+  .detail-plan-image { height: 230px; margin: -34px -28px 30px; }
   .detail-information { padding-top: 90px; padding-bottom: 90px; }
   .detail-information-grid { grid-template-columns: 1fr; }
   .detail-information-grid article:last-child:nth-child(odd) { grid-column: auto; }
