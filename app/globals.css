@@ -27,7 +27,7 @@ main { overflow: hidden; }
 }
 .logo { color: var(--ink); font-weight: 900; font-size: 25px; letter-spacing: -.07em; }
 .logo span { color: var(--lime); }
-.logo-image { display: block; width: 220px; height: 68px; flex: 0 0 auto; overflow: hidden; }
+.logo-image { display: block; width: 220px; height: 55px; flex: 0 0 auto; overflow: hidden; }
 .logo-image img { width: 100%; height: 100%; object-fit: contain; }
 .nav { display: flex; align-items: center; gap: 2.4vw; margin-left: auto; }
 .nav a { color: var(--ink); font-size: 13px; font-weight: 700; }
@@ -189,7 +189,7 @@ h2 { font-size: clamp(42px, 5vw, 70px); max-width: 800px; }
 
 footer { background: var(--sky); border-top: 1px solid #70b4c1; padding: 75px 8vw 30px; }
 .footer-main { display: grid; grid-template-columns: 1.6fr 1fr 1fr .6fr; gap: 5vw; padding-bottom: 60px; }
-.footer-logo { display: block; width: 220px; height: 75px; margin-bottom: 16px; }
+.footer-logo { display: block; width: 260px; height: 65px; margin-bottom: 16px; }
 .footer-main p { color: #36545c; font-size: 13px; line-height: 1.7; }
 .footer-main small { color: var(--teal); font-weight: 900; letter-spacing: .14em; font-size: 9px; }
 .footer-main > div:last-child { display: flex; flex-direction: column; gap: 10px; }
@@ -231,7 +231,7 @@ footer { background: var(--sky); border-top: 1px solid #70b4c1; padding: 75px 8v
 
 @media (max-width: 900px) {
   .site-header { height: 72px; padding: 0 22px; }
-  .site-header .logo-image { width: 168px; height: 54px; }
+  .site-header .logo-image { width: 168px; height: 42px; }
   .nav { display: none; position: absolute; top: 72px; left: 0; right: 0; background: #8dccda; padding: 25px; flex-direction: column; align-items: flex-start; box-shadow: 0 15px 30px #0002; }
   .nav.open { display: flex; }
   .header-cta { margin-left: auto; }
