@@ -368,3 +368,48 @@ footer { background: var(--sky); border-top: 1px solid #70b4c1; padding: 75px 8v
   .detail-information-grid article { padding: 30px 24px; }
   .detail-contact { padding: 75px 24px; }
 }
+
+/* Aumento de legibilidad del 20% sin modificar encabezados */
+.hero-lead { font-size: 21.6px; }
+.intro-grid > p,
+.spaces-heading > p { font-size: 19.2px; }
+.solution-intro,
+.detail-intro { font-size: 18px; }
+.solution-benefits p,
+.detail-benefits p { font-size: 14.4px; }
+.solution-benefits strong { font-size: 16.8px; }
+.plan-grid p { font-size: 13.2px; }
+.plan-note { font-size: 12px; }
+.benefit-list p { font-size: 15.6px; }
+.benefit-list strong { font-size: 18px; }
+.contact-copy > p:not(.eyebrow) { font-size: 18px; }
+.footer-main p { font-size: 15.6px; }
+.detail-highlights p { font-size: 12px; }
+.detail-plan-grid p { font-size: 19.2px; }
+.detail-plan-list li,
+.detail-information-grid li { font-size: 14.4px; }
+.detail-footnotes p,
+.detail-plan-notice { font-size: 13.2px !important; }
+.sales-message p { font-size: 15.6px; }
+
+.button,
+.header-cta { font-size: 15.6px; }
+.text-link { font-size: 15.6px; }
+.finder-options a { font-size: 14.4px; }
+.solution-content .button,
+.detail-contact .button { font-size: 15.6px; }
+.detail-plan-grid a,
+.detail-contact-actions > a:not(.button) { font-size: 14.4px; }
+.sales-launcher,
+.sales-whatsapp { font-size: 14.4px; }
+.sales-options button { font-size: 13.2px; }
+.back-to-top { font-size: 13.2px; }
+
+.contact-form label { font-size: 12px; }
+.contact-form input,
+.contact-form select,
+.contact-form textarea { font-size: 19.2px; }
+.contact-methods small { font-size: 10.8px; }
+.contact-methods strong { font-size: 16.8px; }
+.contact-methods > a > span { font-size: 12px; }
+.form-success p { font-size: 19.2px; }
