@@ -102,7 +102,7 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-image">
-          <img src="/images/01.jpg" alt="Recepción luminosa de las oficinas Zenttre" />
+          <img src="/images/01.jpg" alt="Recepción de las oficinas Zenttre" />
           <div className="hero-note">
             <span className="pulse" />
             <p><strong>Oficinas disponibles</strong><br />Listas para trabajar</p>
@@ -164,7 +164,7 @@ export default function Home() {
           </div>
           <div className="solution-content">
             <p className="eyebrow">TU ESPACIO, TU EQUIPO</p>
-            <h2>Oficinas privadas, luminosas y listas para <em>crecer contigo.</em></h2>
+            <h2>Oficinas privadas y listas para <em>crecer contigo.</em></h2>
             <p className="solution-intro">
               Un espacio profesional que puedes hacer tuyo desde el primer día.
               Mobiliario, servicios y atención incluidos para que tu equipo se
@@ -273,7 +273,7 @@ export default function Home() {
             <p className="eyebrow">CONOCE ZENTTRE</p>
             <h2>Espacios que inspiran <em>buenas ideas.</em></h2>
           </div>
-          <p>Ambientes luminosos, salas con carácter y áreas comunes diseñadas para concentrarte, reunirte y avanzar.</p>
+          <p>Ambientes funcionales, salas con carácter y áreas comunes diseñadas para concentrarte, reunirte y avanzar.</p>
         </div>
         <div className="gallery">
           {gallery.map((image, index) => (
