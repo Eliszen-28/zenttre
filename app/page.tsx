@@ -1,0 +1,273 @@
+"use client";
+
+import { FormEvent, useState } from "react";
+
+const services = [
+  {
+    number: "01",
+    title: "Oficinas equipadas",
+    text: "Espacios privados, amueblados y listos para trabajar, con acceso 24/7 y servicios incluidos.",
+    image: "/images/04.jpg",
+    tag: "Tu oficina, a tu medida",
+  },
+  {
+    number: "02",
+    title: "Salas de juntas",
+    text: "Salas cómodas y profesionales para reuniones de 4 a 10 personas, con Wi‑Fi y pantalla.",
+    image: "/images/09.jpg",
+    tag: "Desde $100 por hora",
+  },
+  {
+    number: "03",
+    title: "Oficina virtual",
+    text: "La presencia de una oficina tradicional sin los gastos de mantener un espacio físico permanente.",
+    image: "/images/03.jpg",
+    tag: "Estándar y Premium",
+  },
+  {
+    number: "04",
+    title: "Domicilio fiscal",
+    text: "Una dirección profesional en la Colonia del Valle, con recepción de documentos y atención personalizada.",
+    image: "/images/10.jpg",
+    tag: "Para personas y empresas",
+  },
+];
+
+const gallery = [
+  "/images/01.jpg",
+  "/images/02.jpg",
+  "/images/07.jpg",
+  "/images/05.jpg",
+  "/images/11.jpg",
+  "/images/14.jpg",
+];
+
+export default function Home() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [sent, setSent] = useState(false);
+
+  function submitContact(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setSent(true);
+  }
+
+  return (
+    <main>
+      <header className="site-header">
+        <a className="logo" href="#inicio" aria-label="Zenttre, inicio">
+          ZENTTRE<span>.</span>
+        </a>
+        <nav className={menuOpen ? "nav open" : "nav"} aria-label="Navegación principal">
+          <a href="#soluciones" onClick={() => setMenuOpen(false)}>Soluciones</a>
+          <a href="#espacios" onClick={() => setMenuOpen(false)}>Nuestros espacios</a>
+          <a href="#nosotros" onClick={() => setMenuOpen(false)}>Por qué Zenttre</a>
+          <a href="#contacto" onClick={() => setMenuOpen(false)}>Contacto</a>
+        </nav>
+        <a className="header-cta" href="#contacto">Cotiza tu espacio <span>→</span></a>
+        <button
+          className="menu-button"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-expanded={menuOpen}
+          aria-label="Abrir menú"
+        >
+          {menuOpen ? "×" : "☰"}
+        </button>
+      </header>
+
+      <section className="hero" id="inicio">
+        <div className="hero-copy">
+          <p className="eyebrow">ESPACIOS DE TRABAJO · COLONIA DEL VALLE</p>
+          <h1>Tu próxima oficina empieza <em>aquí.</em></h1>
+          <p className="hero-lead">
+            Oficinas, salas y servicios virtuales pensados para que tu empresa
+            trabaje mejor, crezca y se sienta en casa.
+          </p>
+          <div className="hero-actions">
+            <a className="button primary" href="#soluciones">Explorar soluciones <span>↗</span></a>
+            <a className="text-link" href="tel:+525520002619">Hablar con un asesor <span>→</span></a>
+          </div>
+        </div>
+        <div className="hero-image">
+          <img src="/images/01.jpg" alt="Recepción luminosa de las oficinas Zenttre" />
+          <div className="hero-note">
+            <span className="pulse" />
+            <p><strong>Oficinas disponibles</strong><br />Listas para trabajar</p>
+          </div>
+        </div>
+        <div className="hero-stamp" aria-hidden="true">Z</div>
+      </section>
+
+      <section className="finder" aria-label="Encuentra tu solución">
+        <div>
+          <p className="finder-label">¿QUÉ NECESITAS?</p>
+          <strong>Encuentra el espacio ideal para ti</strong>
+        </div>
+        <div className="finder-options">
+          <a href="#oficinas"><span>⌂</span> Oficina privada</a>
+          <a href="#salas"><span>◫</span> Sala de juntas</a>
+          <a href="#virtual"><span>◎</span> Oficina virtual</a>
+        </div>
+        <a className="finder-go" href="#contacto" aria-label="Comenzar búsqueda">→</a>
+      </section>
+
+      <section className="intro section-pad" id="soluciones">
+        <p className="eyebrow">SOLUCIONES FLEXIBLES</p>
+        <div className="intro-grid">
+          <h2>Un espacio para cada forma de <em>trabajar.</em></h2>
+          <p>
+            En Zenttre encuentras mucho más que metros cuadrados. Diseñamos
+            espacios funcionales y servicios profesionales para acompañar el
+            ritmo real de tu negocio.
+          </p>
+        </div>
+      </section>
+
+      <section className="services section-pad">
+        {services.map((service, index) => (
+          <article
+            className="service-card"
+            id={index === 0 ? "oficinas" : index === 1 ? "salas" : index === 2 ? "virtual" : undefined}
+            key={service.title}
+          >
+            <div className="service-number">{service.number}</div>
+            <div className="service-photo">
+              <img src={service.image} alt={`Espacio Zenttre para ${service.title.toLowerCase()}`} />
+            </div>
+            <div className="service-copy">
+              <p className="service-tag">{service.tag}</p>
+              <h3>{service.title}</h3>
+              <p>{service.text}</p>
+              <a href="#contacto">Conoce más <span>↗</span></a>
+            </div>
+          </article>
+        ))}
+      </section>
+
+      <section className="benefits" id="nosotros">
+        <div className="benefit-image">
+          <img src="/images/06.jpg" alt="Área de trabajo compartida en Zenttre" />
+          <div className="floating-card">
+            <strong>+1,000</strong>
+            <span>clientes frecuentes</span>
+          </div>
+        </div>
+        <div className="benefit-copy">
+          <p className="eyebrow">TODO LISTO PARA TI</p>
+          <h2>Trabaja con libertad. Nosotros cuidamos <em>el resto.</em></h2>
+          <div className="benefit-list">
+            <div><span>01</span><p><strong>Acceso 24/7</strong>Tu espacio disponible los 365 días del año.</p></div>
+            <div><span>02</span><p><strong>Ubicación estratégica</strong>En el corazón de la Colonia del Valle, CDMX.</p></div>
+            <div><span>03</span><p><strong>Servicios incluidos</strong>Wi‑Fi, limpieza, seguridad y atención a tus visitas.</p></div>
+            <div><span>04</span><p><strong>Espacios flexibles</strong>Soluciones que se adaptan al tamaño y ritmo de tu equipo.</p></div>
+          </div>
+          <a className="button primary" href="#contacto">Agenda una visita <span>↗</span></a>
+        </div>
+      </section>
+
+      <section className="spaces section-pad" id="espacios">
+        <div className="spaces-heading">
+          <div>
+            <p className="eyebrow">CONOCE ZENTTRE</p>
+            <h2>Espacios que inspiran <em>buenas ideas.</em></h2>
+          </div>
+          <p>Ambientes luminosos, salas con carácter y áreas comunes diseñadas para concentrarte, reunirte y avanzar.</p>
+        </div>
+        <div className="gallery">
+          {gallery.map((image, index) => (
+            <figure key={image} className={`gallery-${index + 1}`}>
+              <img src={image} alt={`Interior de Zenttre ${index + 1}`} />
+              {index === 0 && <figcaption>Recepción · Zenttre Del Valle</figcaption>}
+              {index === 1 && <figcaption>Áreas comunes</figcaption>}
+            </figure>
+          ))}
+        </div>
+      </section>
+
+      <section className="quote-strip">
+        <p>“La oficina que se adapta a tu negocio, no al revés.”</p>
+        <span>ZENTTRE · OFICINAS A LA MEDIDA</span>
+      </section>
+
+      <section className="contact section-pad" id="contacto">
+        <div className="contact-copy">
+          <p className="eyebrow">HABLEMOS</p>
+          <h2>Tu nuevo espacio está a un mensaje de <em>distancia.</em></h2>
+          <p>Cuéntanos qué necesitas. Nuestro equipo te ayudará a encontrar la solución ideal.</p>
+          <div className="contact-methods">
+            <a href="tel:+525520002619">
+              <span>01</span><div><small>LLÁMANOS</small><strong>(55) 2000 2619</strong></div><b>↗</b>
+            </a>
+            <a href="mailto:mensajes@zenttre.com">
+              <span>02</span><div><small>ESCRÍBENOS</small><strong>mensajes@zenttre.com</strong></div><b>↗</b>
+            </a>
+            <a href="https://wa.me/525579250612" target="_blank" rel="noreferrer">
+              <span>03</span><div><small>WHATSAPP</small><strong>(55) 79 250612</strong></div><b>↗</b>
+            </a>
+          </div>
+        </div>
+        <form className="contact-form" onSubmit={submitContact}>
+          {sent ? (
+            <div className="form-success" role="status">
+              <span>✓</span>
+              <h3>Gracias por escribirnos.</h3>
+              <p>Recibimos tus datos. También puedes llamarnos al (55) 2000 2619 para atención inmediata.</p>
+              <button type="button" className="text-link" onClick={() => setSent(false)}>Enviar otro mensaje →</button>
+            </div>
+          ) : (
+            <>
+              <div className="field-row">
+                <label>Nombre<input name="name" required placeholder="Tu nombre" /></label>
+                <label>Teléfono<input name="phone" required type="tel" placeholder="55 0000 0000" /></label>
+              </div>
+              <label>Correo electrónico<input name="email" required type="email" placeholder="nombre@empresa.com" /></label>
+              <label>Me interesa
+                <select name="service" defaultValue="">
+                  <option value="" disabled>Selecciona una solución</option>
+                  <option>Oficina equipada</option>
+                  <option>Sala de juntas</option>
+                  <option>Oficina virtual</option>
+                  <option>Domicilio fiscal</option>
+                </select>
+              </label>
+              <label>Mensaje<textarea name="message" rows={3} placeholder="Cuéntanos qué espacio necesitas" /></label>
+              <label className="privacy"><input type="checkbox" required /> Acepto el aviso de privacidad.</label>
+              <button className="button primary submit" type="submit">Quiero recibir información <span>↗</span></button>
+            </>
+          )}
+        </form>
+      </section>
+
+      <footer>
+        <div className="footer-main">
+          <div>
+            <a className="logo footer-logo" href="#inicio">ZENTTRE<span>.</span></a>
+            <p>Oficinas a la medida para ti.</p>
+          </div>
+          <div>
+            <small>VISÍTANOS</small>
+            <p>Aniceto Ortega 817<br />Col. Del Valle, CDMX<br />C.P. 03100</p>
+          </div>
+          <div>
+            <small>HORARIO</small>
+            <p>Lunes a viernes<br />9:00 a 18:00<br />Sábados 9:00 a 13:00</p>
+          </div>
+          <div>
+            <small>EXPLORA</small>
+            <a href="#soluciones">Soluciones</a>
+            <a href="#espacios">Espacios</a>
+            <a href="#contacto">Contacto</a>
+          </div>
+        </div>
+        <div className="footer-bottom">
+          <span>© Zenttre 2026</span>
+          <span>Aviso de privacidad · Términos y condiciones</span>
+          <a href="#inicio">Volver arriba ↑</a>
+        </div>
+      </footer>
+
+      <a className="whatsapp-float" href="https://wa.me/525579250612" target="_blank" rel="noreferrer" aria-label="Contactar por WhatsApp">
+        <span>◉</span><b>WhatsApp</b>
+      </a>
+    </main>
+  );
+}
