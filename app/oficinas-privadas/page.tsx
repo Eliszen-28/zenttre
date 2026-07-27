@@ -3,31 +3,35 @@ import ServiceDetailPage from "../components/ServiceDetailPage";
 export default function OficinasPrivadasPage() {
   return (
     <ServiceDetailPage
-      eyebrow="OFICINAS PRIVADAS · LISTAS PARA TRABAJAR"
-      title="Tu oficina, con la privacidad para"
-      italicTitle="hacerla tuya."
-      intro="Espacios equipados para equipos de 2 a 10 personas, con mobiliario, servicios y atención incluidos desde el primer día."
+      eyebrow="OFICINAS EQUIPADAS · LISTAS PARA TRABAJAR"
+      title="Aquí tenemos un espacio"
+      italicTitle="a tu medida."
+      intro="Espacios con mobiliario incluido, acceso a todos los servicios y áreas comunes."
       heroImage="/images/04.jpg"
       secondaryImage="/images/07.jpg"
-      serviceName="Oficinas privadas"
+      serviceName="Oficinas equipadas"
       highlights={[
         { value: "2–10", label: "personas por oficina" },
-        { value: "24/7", label: "acceso todos los días" },
-        { value: "Todo incluido", label: "sin costos ocultos" },
+        { value: "24/7", label: "los 365 días del año" },
+        { value: "Desde $4,500", label: "mensuales + IVA" },
       ]}
-      sectionTitle="Un espacio profesional que"
-      sectionItalic="crece contigo."
-      sectionText="Instálate sin inversiones iniciales ni gestiones complicadas. Tu equipo encuentra un lugar cómodo, funcional y profesional, mientras Zenttre se encarga de la operación diaria."
+      sectionTitle="Un espacio para tu empresa donde el profesionalismo y"
+      sectionItalic="tu crecimiento son primordiales."
+      sectionText="Acceso permanente, mobiliario y servicios para que tu empresa trabaje en un entorno profesional."
       benefits={[
-        { title: "Lista desde el primer día", text: "Mobiliario, internet de alta velocidad, limpieza y mantenimiento incluidos." },
-        { title: "Acceso y seguridad", text: "Entrada 24/7 los 365 días del año para trabajar a tu ritmo." },
-        { title: "Imagen profesional", text: "Recepción de visitas y correspondencia en una ubicación estratégica de CDMX." },
-        { title: "Espacios compartidos", text: "Acceso a áreas comunes y tarifas preferenciales en salas de juntas." },
+        { title: "Acceso permanente", text: "Acceso 24/7 los 365 días del año." },
+        { title: "Servicios adicionales", text: "Bebidas, copiado, impresiones y escaneo disponibles con costo adicional." },
+        { title: "Conectividad", text: "Acceso por medio de Apple TV y HDMI en salas con pantalla." },
+        { title: "Áreas comunes", text: "Acceso a servicios y espacios compartidos de Zenttre." },
       ]}
       plans={[
-        { eyebrow: "EQUIPOS PEQUEÑOS", title: "Oficina para 2–4", description: "Privacidad y funcionalidad para profesionales y equipos compactos." },
-        { eyebrow: "EQUIPOS EN CRECIMIENTO", title: "Oficina para 5–10", description: "Más espacio para colaborar sin perder la concentración y privacidad." },
+        { eyebrow: "OFICINA EQUIPADA", title: "Oficina A", description: "Oficina cómoda para 3 personas.", details: ["5 m²", "Bono para salas: $1,000"], price: "$4,500 mensuales + IVA" },
+        { eyebrow: "OFICINA EQUIPADA", title: "Oficina para 10 personas", description: "Oficina cómoda para 10 personas aproximadamente.", details: ["32 m²", "Pantalla para proyección de 85″", "Aire acondicionado", "Conexiones múltiples para los equipos", "Wi‑Fi incluido", "Bono mensual de salas: $1,900"], price: "$13,400 mensuales + IVA" },
+        { eyebrow: "OFICINA EQUIPADA", title: "Oficina Verde", description: "Oficina cómoda para 7 personas aproximadamente.", details: ["32 m²", "Aire acondicionado", "Conexiones múltiples para los equipos", "Wi‑Fi, agua y limpieza incluidos", "Bono mensual de salas: $2,500"], price: "$25,500 mensuales + IVA" },
+        { eyebrow: "OFICINA EQUIPADA", title: "Oficina 205", description: "Oficina cómoda para 3 personas.", details: ["6.6 m²", "Wi‑Fi incluido", "Bono mensual de salas: $1,200"], price: "$5,000 mensuales + IVA" },
+        { eyebrow: "OFICINA EQUIPADA", title: "Oficina 604", description: "Oficina cómoda para 2 personas.", details: ["5 m²", "Conexiones múltiples para los equipos", "Wi‑Fi incluido", "Bono mensual de salas: $1,200"], price: "$5,000 mensuales + IVA" },
       ]}
+      footnotes={["Los servicios de bebidas, copiado, impresiones y escaneo tienen costo adicional.", "Apple TV y HDMI están disponibles en salas con pantalla."]}
     />
   );
 }

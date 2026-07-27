@@ -150,7 +150,7 @@ export default function Home() {
               <p className="service-tag">{service.tag}</p>
               <h3>{service.title}</h3>
               <p>{service.text}</p>
-              <a href={index === 0 ? "/oficinas-privadas" : index === 1 ? "/salas-de-juntas" : index === 3 ? "/domicilio-fiscal-comercial" : "#contacto"}>Conoce más <span>↗</span></a>
+              <a href={index === 0 ? "/oficinas-privadas" : index === 1 ? "/salas-de-juntas" : index === 2 ? "/oficina-virtual" : "/domicilio-fiscal-comercial"}>Conoce más <span>↗</span></a>
             </div>
           </article>
         ))}
@@ -360,6 +360,7 @@ export default function Home() {
             <small>EXPLORA</small>
             <a href="#soluciones">Soluciones</a>
             <a href="#espacios">Espacios</a>
+            <a href="/oficina-virtual">Oficina virtual</a>
             <a href="#contacto">Contacto</a>
           </div>
         </div>

@@ -13,6 +13,13 @@ type Plan = {
   title: string;
   description: string;
   price?: string;
+  details?: string[];
+  notice?: string;
+};
+
+type InformationSection = {
+  title: string;
+  items: string[];
 };
 
 type ServiceDetailPageProps = {
@@ -29,6 +36,9 @@ type ServiceDetailPageProps = {
   sectionTitle: string;
   sectionItalic: string;
   sectionText: string;
+  informationTitle?: string;
+  informationSections?: InformationSection[];
+  footnotes?: string[];
 };
 
 export default function ServiceDetailPage({
@@ -45,6 +55,9 @@ export default function ServiceDetailPage({
   sectionTitle,
   sectionItalic,
   sectionText,
+  informationTitle,
+  informationSections,
+  footnotes,
 }: ServiceDetailPageProps) {
   const whatsapp = `https://wa.me/525579250612?text=${encodeURIComponent(
     `Hola, me interesa recibir información sobre ${serviceName}. ¿Podrían ayudarme?`,
@@ -60,6 +73,7 @@ export default function ServiceDetailPage({
           <a href="/oficinas-privadas">Oficinas privadas</a>
           <a href="/salas-de-juntas">Salas de juntas</a>
           <a href="/domicilio-fiscal-comercial">Domicilio empresarial</a>
+          <a href="/oficina-virtual">Oficina virtual</a>
         </nav>
         <a className="header-cta" href={whatsapp} target="_blank" rel="noreferrer">
           Contactar <span>→</span>
@@ -129,8 +143,30 @@ export default function ServiceDetailPage({
                 <small>{plan.eyebrow}</small>
                 <h3>{plan.title}</h3>
                 <p>{plan.description}</p>
+                {plan.details && (
+                  <ul className="detail-plan-list">
+                    {plan.details.map((detail) => <li key={detail}>{detail}</li>)}
+                  </ul>
+                )}
                 {plan.price && <strong>{plan.price}</strong>}
+                {plan.notice && <p className="detail-plan-notice">{plan.notice}</p>}
                 <a href={whatsapp} target="_blank" rel="noreferrer">Consultar disponibilidad <span>↗</span></a>
+              </article>
+            ))}
+          </div>
+          {footnotes && <div className="detail-footnotes">{footnotes.map((note) => <p key={note}>{note}</p>)}</div>}
+        </section>
+      )}
+
+      {informationSections && (
+        <section className="detail-information section-pad">
+          <p className="eyebrow">REQUERIMIENTOS Y CONDICIONES</p>
+          <h2>{informationTitle || "Información para contratar"}</h2>
+          <div className="detail-information-grid">
+            {informationSections.map((section) => (
+              <article key={section.title}>
+                <h3>{section.title}</h3>
+                <ul>{section.items.map((item) => <li key={item}>{item}</li>)}</ul>
               </article>
             ))}
           </div>
@@ -160,7 +196,7 @@ export default function ServiceDetailPage({
             <p>Oficinas a la medida para ti.</p>
           </div>
           <div><small>VISÍTANOS</small><p>Aniceto Ortega 817<br />Col. Del Valle, CDMX<br />C.P. 03100</p></div>
-          <div><small>EXPLORA</small><p><a href="/oficinas-privadas">Oficinas privadas</a><br /><a href="/salas-de-juntas">Salas de juntas</a><br /><a href="/domicilio-fiscal-comercial">Domicilio empresarial</a></p></div>
+          <div><small>EXPLORA</small><p><a href="/oficinas-privadas">Oficinas privadas</a><br /><a href="/salas-de-juntas">Salas de juntas</a><br /><a href="/domicilio-fiscal-comercial">Domicilio fiscal</a><br /><a href="/oficina-virtual">Oficina virtual</a></p></div>
         </div>
         <div className="footer-bottom">
           <span>© Zenttre 2026</span>

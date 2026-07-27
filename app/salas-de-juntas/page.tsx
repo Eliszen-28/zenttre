@@ -4,30 +4,35 @@ export default function SalasDeJuntasPage() {
   return (
     <ServiceDetailPage
       eyebrow="SALAS DE JUNTAS · RESERVA POR HORA"
-      title="Reuniones importantes en el espacio"
-      italicTitle="indicado."
-      intro="Salas privadas, cómodas y equipadas para recibir clientes, presentar proyectos o colaborar con tu equipo desde $100 por hora."
+      title="Alternativas para"
+      italicTitle="tus reuniones."
+      intro="Oficinas y salas acordes a lo que necesitas, con capacidades de 3 a 10 personas."
       heroImage="/images/09.jpg"
       secondaryImage="/images/11.jpg"
       serviceName="Salas de juntas"
       highlights={[
         { value: "Desde $100", label: "por hora + IVA" },
-        { value: "4–10", label: "personas según la sala" },
-        { value: "Por hora", label: "sin contratos largos" },
+        { value: "3–10", label: "personas según la sala" },
+        { value: "6 opciones", label: "para distintos tipos de junta" },
       ]}
-      sectionTitle="Todo lo necesario para que la conversación"
-      sectionItalic="avance."
-      sectionText="Reserva solamente el tiempo que necesitas. Cada sala ofrece una atmósfera profesional y herramientas para que tus juntas sean cómodas, puntuales y productivas."
+      sectionTitle="Oficinas y salas acordes a"
+      sectionItalic="lo que necesitas."
+      sectionText="Acceso 24/7, servicios complementarios y conectividad para reuniones breves, presentaciones y sesiones con colaboradores."
       benefits={[
-        { title: "Conectividad incluida", text: "Wi‑Fi de alta velocidad para todos los participantes." },
-        { title: "Presentaciones sencillas", text: "Pantalla, Apple TV, conexión HDMI y pizarrón disponibles." },
-        { title: "Atención a tus visitas", text: "Recepción profesional para clientes, proveedores y colaboradores." },
-        { title: "Reserva flexible", text: "Elige la capacidad y las horas que realmente necesitas." },
+        { title: "Acceso permanente", text: "Acceso 24/7 los 365 días del año." },
+        { title: "Servicios adicionales", text: "Bebidas, copiado, impresiones y escaneo disponibles con costo adicional." },
+        { title: "Conectividad", text: "Apple TV y HDMI en las salas que cuentan con pantalla." },
+        { title: "Distintas capacidades", text: "Opciones para reuniones de 3, 4 y hasta 10 personas." },
       ]}
       plans={[
-        { eyebrow: "REUNIONES BREVES", title: "Sala hasta 4 personas", description: "Ideal para entrevistas, videollamadas y sesiones de trabajo.", price: "Desde $100 por hora + IVA" },
-        { eyebrow: "JUNTAS Y PRESENTACIONES", title: "Sala hasta 10 personas", description: "Amplitud para clientes, equipos y presentaciones importantes.", price: "Cotiza según horario y duración" },
+        { eyebrow: "MÁXIMO 4 PERSONAS", title: "Sala A", description: "Cómoda y práctica, ideal para reuniones breves.", details: ["Wi‑Fi", "Pizarrón", "Servicio de bebidas disponible en recepción"], price: "$100.00 por hora + IVA" },
+        { eyebrow: "MÁXIMO 4 PERSONAS", title: "Sala A+", description: "Estilo inglés modernista con una cortina que aísla el sonido y la luz externa.", details: ["Wi‑Fi", "Pantalla"], price: "$220.00 por hora + IVA" },
+        { eyebrow: "MÁXIMO 10 PERSONAS", title: "Sala B", description: "Vibrante y elegante para juntas importantes con total comodidad.", details: ["Wi‑Fi", "Pantalla", "Sistema de aislamiento", "Pizarrón"], price: "$320.00 por hora + IVA" },
+        { eyebrow: "MÁXIMO 10 PERSONAS", title: "Sala C", description: "Sofisticada y privada para dar presencia y confidencialidad a tus reuniones.", details: ["Wi‑Fi", "Sistema de aislamiento", "Pantalla", "Pizarrón"], price: "$280.00 por hora + IVA" },
+        { eyebrow: "MÁXIMO 10 PERSONAS", title: "Sala D", description: "Espaciosa, con estilo ecléctico, ideal para reuniones con colaboradores.", details: ["Wi‑Fi", "Apta para consumo de alimentos y bebidas", "Pantalla", "Vista a las áreas comunes"], price: "$280.00 por hora + IVA", notice: "No disponible de lunes a viernes de 14:00 a 17:00 horas." },
+        { eyebrow: "MÁXIMO 3 PERSONAS", title: "Salas B1 y B2", description: "Franjas orgánicas estilo bambú para reuniones confidenciales, con estilo y frescura.", price: "$150.00 por hora + IVA" },
       ]}
+      footnotes={["Los servicios de bebidas, copiado, impresiones y escaneo tienen costo adicional.", "Apple TV y HDMI están disponibles en salas con pantalla."]}
     />
   );
 }
