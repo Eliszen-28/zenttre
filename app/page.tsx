@@ -2,37 +2,6 @@
 
 import { FormEvent, useState } from "react";
 
-const services = [
-  {
-    number: "01",
-    title: "Oficinas equipadas",
-    text: "Espacios privados, amueblados y listos para trabajar, con acceso 24/7 y servicios incluidos.",
-    image: "/images/04.jpg",
-    tag: "Tu oficina, a tu medida",
-  },
-  {
-    number: "02",
-    title: "Salas de juntas",
-    text: "Salas cómodas y profesionales para reuniones de 4 a 10 personas, con Wi‑Fi y pantalla.",
-    image: "/images/09.jpg",
-    tag: "Desde $100 por hora",
-  },
-  {
-    number: "03",
-    title: "Oficina virtual",
-    text: "La presencia de una oficina tradicional sin los gastos de mantener un espacio físico permanente.",
-    image: "/images/03.jpg",
-    tag: "Estándar y Premium",
-  },
-  {
-    number: "04",
-    title: "Domicilio fiscal",
-    text: "Una dirección profesional en la Colonia del Valle, con recepción de documentos y atención personalizada.",
-    image: "/images/10.jpg",
-    tag: "Para personas y empresas",
-  },
-];
-
 const gallery = [
   "/images/01.jpg",
   "/images/02.jpg",
@@ -119,27 +88,6 @@ export default function Home() {
             ritmo real de tu negocio.
           </p>
         </div>
-      </section>
-
-      <section className="services section-pad">
-        {services.map((service, index) => (
-          <article
-            className="service-card"
-            id={index === 0 ? "oficinas" : index === 1 ? "salas" : index === 2 ? "virtual" : undefined}
-            key={service.title}
-          >
-            <div className="service-number">{service.number}</div>
-            <div className="service-photo">
-              <img src={service.image} alt={`Espacio Zenttre para ${service.title.toLowerCase()}`} />
-            </div>
-            <div className="service-copy">
-              <p className="service-tag">{service.tag}</p>
-              <h3>{service.title}</h3>
-              <p>{service.text}</p>
-              <a href={index === 0 ? "/oficinas-privadas" : index === 1 ? "/salas-de-juntas" : index === 2 ? "/oficina-virtual" : "/domicilio-fiscal-comercial"}>Conoce más <span>↗</span></a>
-            </div>
-          </article>
-        ))}
       </section>
 
       <section className="solution-details" aria-label="Soluciones de trabajo Zenttre">
