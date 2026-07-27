@@ -23,7 +23,7 @@ main { overflow: hidden; }
 
 .site-header {
   height: 88px; padding: 0 4.5vw; display: flex; align-items: center; gap: 4vw;
-  background: var(--white); border-bottom: 1px solid var(--line); position: relative; z-index: 20;
+  background: #8dccda; border-bottom: 1px solid #79bac8; position: relative; z-index: 20;
 }
 .logo { color: var(--ink); font-weight: 900; font-size: 25px; letter-spacing: -.07em; }
 .logo span { color: var(--lime); }
@@ -201,7 +201,7 @@ footer { background: var(--sky); border-top: 1px solid #70b4c1; padding: 75px 8v
 @media (max-width: 900px) {
   .site-header { height: 72px; padding: 0 22px; }
   .site-header .logo-image { width: 168px; height: 54px; }
-  .nav { display: none; position: absolute; top: 72px; left: 0; right: 0; background: var(--white); padding: 25px; flex-direction: column; align-items: flex-start; box-shadow: 0 15px 30px #0002; }
+  .nav { display: none; position: absolute; top: 72px; left: 0; right: 0; background: #8dccda; padding: 25px; flex-direction: column; align-items: flex-start; box-shadow: 0 15px 30px #0002; }
   .nav.open { display: flex; }
   .header-cta { margin-left: auto; }
   .menu-button { display: block; }
