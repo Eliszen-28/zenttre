@@ -58,10 +58,10 @@ export default function Home() {
           <img src="/zenttre-logo-v3.png" alt="Zenttre smart office services" />
         </a>
         <nav className={menuOpen ? "nav open" : "nav"} aria-label="Navegación principal">
-          <a href="#soluciones" onClick={() => setMenuOpen(false)}>Soluciones</a>
-          <a href="#espacios" onClick={() => setMenuOpen(false)}>Nuestros espacios</a>
-          <a href="#nosotros" onClick={() => setMenuOpen(false)}>Por qué Zenttre</a>
-          <a href="#contacto" onClick={() => setMenuOpen(false)}>Contacto</a>
+          <a href="/oficinas-privadas" onClick={() => setMenuOpen(false)}>Oficinas equipadas</a>
+          <a href="/oficina-virtual" onClick={() => setMenuOpen(false)}>Oficinas virtuales</a>
+          <a href="/salas-de-juntas" onClick={() => setMenuOpen(false)}>Salas de juntas</a>
+          <a href="/domicilio-fiscal-comercial" onClick={() => setMenuOpen(false)}>Domicilio fiscal</a>
         </nav>
         <a className="header-cta" href="#contacto">Cotiza tu espacio <span>→</span></a>
         <button

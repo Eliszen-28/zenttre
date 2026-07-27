@@ -71,10 +71,10 @@ export default function ServiceDetailPage({
           <img src="/zenttre-logo-v3.png" alt="Zenttre smart office services" />
         </a>
         <nav className="nav detail-nav" aria-label="Navegación de servicios">
-          <a href="/oficinas-privadas">Oficinas privadas</a>
+          <a href="/oficinas-privadas">Oficinas equipadas</a>
+          <a href="/oficina-virtual">Oficinas virtuales</a>
           <a href="/salas-de-juntas">Salas de juntas</a>
-          <a href="/domicilio-fiscal-comercial">Domicilio empresarial</a>
-          <a href="/oficina-virtual">Oficina virtual</a>
+          <a href="/domicilio-fiscal-comercial">Domicilio fiscal</a>
         </nav>
         <a className="header-cta" href={whatsapp} target="_blank" rel="noreferrer">
           Contactar <span>→</span>
