@@ -274,6 +274,15 @@ footer { background: var(--sky); border-top: 1px solid #70b4c1; padding: 75px 8v
 .detail-information-grid h3 { font-size: 28px; margin-bottom: 25px; }
 .detail-information-grid ul { margin: 0; padding-left: 19px; }
 .detail-information-grid li { margin-bottom: 10px; color: var(--gray); font-size: 12px; line-height: 1.6; }
+.virtual-offer { padding-top: 90px; padding-bottom: 90px; background: var(--white); }
+.virtual-offer-box { padding: 55px 5vw; border-left: 8px solid var(--lime); background: #f1f8f9; box-shadow: 0 18px 55px #38575e14; }
+.virtual-offer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 7vw; align-items: center; }
+.virtual-discounts { display: flex; flex-direction: column; gap: 18px; }
+.virtual-discounts strong { color: var(--ink); font-size: clamp(22px, 2.2vw, 32px); line-height: 1.25; letter-spacing: -.025em; }
+.virtual-phone { padding-left: 4vw; border-left: 1px solid #b8d4d8; }
+.virtual-phone p { margin: 0 0 15px; color: var(--gray); line-height: 1.6; }
+.virtual-phone p:first-child { color: var(--ink); font-weight: 800; margin-bottom: 24px; }
+.virtual-phone strong { color: var(--ink); }
 .detail-contact { min-height: 390px; padding: 80px 8vw; background: var(--dark-bg); display: grid; grid-template-columns: 1.25fr .75fr; gap: 8vw; align-items: center; }
 .detail-contact .eyebrow { color: var(--sky); }
 .detail-contact h2 { color: var(--white); font-size: clamp(40px, 4.6vw, 64px); }
@@ -367,6 +376,10 @@ footer { background: var(--sky); border-top: 1px solid #70b4c1; padding: 75px 8v
   .detail-information-grid { grid-template-columns: 1fr; }
   .detail-information-grid article:last-child:nth-child(odd) { grid-column: auto; }
   .detail-information-grid article { padding: 30px 24px; }
+  .virtual-offer { padding-top: 60px; padding-bottom: 60px; }
+  .virtual-offer-box { padding: 40px 26px; }
+  .virtual-offer-grid { grid-template-columns: 1fr; gap: 38px; }
+  .virtual-phone { padding: 30px 0 0; border-left: 0; border-top: 1px solid #b8d4d8; }
   .detail-contact { padding: 75px 24px; }
 }
 
@@ -414,3 +427,4 @@ footer { background: var(--sky); border-top: 1px solid #70b4c1; padding: 75px 8v
 .contact-methods strong { font-size: 16.8px; }
 .contact-methods > a > span { font-size: 12px; }
 .form-success p { font-size: 19.2px; }
+.virtual-phone p { font-size: 19.2px; }

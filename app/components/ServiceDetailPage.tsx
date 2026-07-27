@@ -40,6 +40,7 @@ type ServiceDetailPageProps = {
   informationTitle?: string;
   informationSections?: InformationSection[];
   footnotes?: string[];
+  showVirtualOffer?: boolean;
 };
 
 export default function ServiceDetailPage({
@@ -59,6 +60,7 @@ export default function ServiceDetailPage({
   informationTitle,
   informationSections,
   footnotes,
+  showVirtualOffer,
 }: ServiceDetailPageProps) {
   const whatsapp = `https://wa.me/525579250612?text=${encodeURIComponent(
     `Hola, me interesa recibir información sobre ${serviceName}. ¿Podrían ayudarme?`,
@@ -175,6 +177,25 @@ export default function ServiceDetailPage({
                 <ul>{section.items.map((item) => <li key={item}>{item}</li>)}</ul>
               </article>
             ))}
+          </div>
+        </section>
+      )}
+
+      {showVirtualOffer && (
+        <section className="virtual-offer section-pad" aria-label="Descuentos y servicio telefónico">
+          <div className="virtual-offer-box">
+            <p className="eyebrow">BENEFICIOS DE CONTRATACIÓN</p>
+            <div className="virtual-offer-grid">
+              <div className="virtual-discounts">
+                <strong>*6% de descuento al hacer tu pago semestral</strong>
+                <strong>*12% de descuento al hacer tu pago anual</strong>
+              </div>
+              <div className="virtual-phone">
+                <p>Servicio adicional de número telefónico personalizado:</p>
+                <p>Activación por <strong>$1,000.00 + I.V.A.</strong></p>
+                <p>Pago mensual de <strong>$500.00 + I.V.A.</strong></p>
+              </div>
+            </div>
           </div>
         </section>
       )}
