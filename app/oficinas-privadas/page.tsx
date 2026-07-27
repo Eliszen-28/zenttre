@@ -25,11 +25,11 @@ export default function OficinasPrivadasPage() {
         { title: "Áreas comunes", text: "Acceso a servicios y espacios compartidos de Zenttre." },
       ]}
       plans={[
-        { eyebrow: "OFICINA EQUIPADA", title: "Oficina A", description: "Oficina cómoda para 3 personas.", details: ["5 m²", "Bono para salas: $1,000"], price: "$4,500 mensuales + IVA" },
-        { eyebrow: "OFICINA EQUIPADA", title: "Oficina para 10 personas", description: "Oficina cómoda para 10 personas aproximadamente.", details: ["32 m²", "Pantalla para proyección de 85″", "Aire acondicionado", "Conexiones múltiples para los equipos", "Wi‑Fi incluido", "Bono mensual de salas: $1,900"], price: "$13,400 mensuales + IVA" },
-        { eyebrow: "OFICINA EQUIPADA", title: "Oficina Verde", description: "Oficina cómoda para 7 personas aproximadamente.", details: ["32 m²", "Aire acondicionado", "Conexiones múltiples para los equipos", "Wi‑Fi, agua y limpieza incluidos", "Bono mensual de salas: $2,500"], price: "$25,500 mensuales + IVA" },
-        { eyebrow: "OFICINA EQUIPADA", title: "Oficina 205", description: "Oficina cómoda para 3 personas.", details: ["6.6 m²", "Wi‑Fi incluido", "Bono mensual de salas: $1,200"], price: "$5,000 mensuales + IVA" },
-        { eyebrow: "OFICINA EQUIPADA", title: "Oficina 604", description: "Oficina cómoda para 2 personas.", details: ["5 m²", "Conexiones múltiples para los equipos", "Wi‑Fi incluido", "Bono mensual de salas: $1,200"], price: "$5,000 mensuales + IVA" },
+        { eyebrow: "OFICINA EQUIPADA", title: "Oficina A", description: "Oficina cómoda para 3 personas", details: ["5m²", "Bono salas $1,000"], price: "Mensuales $4,500 + IVA." },
+        { eyebrow: "OFICINA EQUIPADA", title: "Oficina para 10 personas", description: "Oficina cómoda para 10 personas aprox.", details: ["32m²", "Pantalla para proyección de 85″", "Aire acondicionado", "Conexiones múltiples para los equipos", "Wifi gratis", "Bono mensual de salas $1,900"], price: "Mensuales $13,400 + IVA." },
+        { eyebrow: "OFICINA EQUIPADA", title: "Oficina Verde", description: "Oficina cómoda para 7 personas aprox.", details: ["32m²", "Aire acondicionado", "Conexiones múltiples para los equipos", "Wifi, agua y limpieza incluidos", "Bono mensual de salas $2,500"], price: "Mensuales $25,500 + IVA." },
+        { eyebrow: "OFICINA EQUIPADA", title: "Oficina 205", description: "Oficina cómoda para 3 personas", details: ["6.6m²", "Wifi gratis", "Bono mensual de salas $1,200"], price: "Mensuales $5,000 + IVA." },
+        { eyebrow: "OFICINA EQUIPADA", title: "Oficina 604", description: "Oficina cómoda para 2 personas", details: ["5m²", "Conexiones múltiples para los equipos", "Wifi gratis", "Bono mensual de salas $1,200"], price: "Mensuales $5,000 + IVA." },
       ]}
       footnotes={["Los servicios de bebidas, copiado, impresiones y escaneo tienen costo adicional.", "Apple TV y HDMI están disponibles en salas con pantalla."]}
     />
