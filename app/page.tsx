@@ -169,13 +169,29 @@ export default function Home() {
                 <strong>Desde $1,860 <span>+ IVA / mes</span></strong>
               </div>
             </div>
-            <p className="plan-note">6% de descuento en pago semestral · 12% de descuento en pago anual.</p>
             <div className="solution-actions">
               <a className="button primary" href="/domicilio-fiscal-comercial">Ver planes y beneficios <span>↗</span></a>
               <a className="text-link" href="mailto:mensajes@zenttre.com">Revisar requisitos →</a>
             </div>
           </div>
         </article>
+      </section>
+
+      <section className="virtual-offer section-pad" aria-label="Descuentos y servicio telefónico">
+        <div className="virtual-offer-box">
+          <p className="eyebrow">BENEFICIOS DE CONTRATACIÓN</p>
+          <div className="virtual-offer-grid">
+            <div className="virtual-discounts">
+              <strong>*6% de descuento al hacer tu pago semestral</strong>
+              <strong>*12% de descuento al hacer tu pago anual</strong>
+            </div>
+            <div className="virtual-phone">
+              <p>Servicio adicional de número telefónico personalizado:</p>
+              <p>Activación por <strong>$1,000.00 + I.V.A.</strong></p>
+              <p>Pago mensual de <strong>$500.00 + I.V.A.</strong></p>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section className="benefits" id="nosotros">
