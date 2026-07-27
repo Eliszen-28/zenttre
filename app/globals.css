@@ -226,6 +226,14 @@ footer { background: var(--sky); border-top: 1px solid #70b4c1; padding: 75px 8v
 .sales-whatsapp.ready { background: #25d366; color: #103a20; cursor: pointer; }
 .sales-whatsapp > span { font-size: 18px; }
 .sales-agent-body > small { display: block; margin-top: 10px; text-align: center; color: #798486; font-size: 9px; }
+.back-to-top {
+  position: fixed; left: 22px; bottom: 22px; z-index: 38; min-height: 48px; padding: 0 18px;
+  border: 1px solid #ffffff66; border-radius: 26px; background: var(--ink); color: var(--white);
+  display: flex; align-items: center; gap: 9px; box-shadow: 0 10px 30px #00000025;
+  font-size: 11px; font-weight: 800; cursor: pointer;
+}
+.back-to-top:hover { background: var(--teal); transform: translateY(-1px); }
+.back-to-top span { color: var(--lime); font-size: 18px; }
 
 .detail-header { position: relative; }
 .detail-hero { min-height: 680px; display: grid; grid-template-columns: 49% 51%; background: var(--sky); }
@@ -286,7 +294,6 @@ footer { background: var(--sky); border-top: 1px solid #70b4c1; padding: 75px 8v
 .detail-contact-actions > a:not(.button) { color: var(--white); font-size: 13px; font-weight: 800; border-bottom: 1px solid #ffffff55; padding-bottom: 5px; }
 .detail-footer { grid-template-columns: 1.5fr 1fr 1fr; }
 .detail-footer a { color: var(--ink); }
-.detail-whatsapp { position: fixed; right: 22px; bottom: 22px; z-index: 45; min-height: 52px; padding: 0 20px; border-radius: 28px; display: flex; align-items: center; gap: 9px; background: #25d366; color: #103a20; box-shadow: 0 10px 30px #0003; font-size: 12px; font-weight: 900; }
 
 @media (max-width: 900px) {
   .site-header { height: 72px; padding: 0 22px; }
@@ -359,6 +366,7 @@ footer { background: var(--sky); border-top: 1px solid #70b4c1; padding: 75px 8v
   .footer-bottom { flex-direction: column; gap: 12px; }
   .sales-agent { right: 15px; bottom: 82px; }
   .sales-launcher { right: 15px; bottom: 17px; }
+  .back-to-top { left: 15px; bottom: 17px; padding: 0 14px; }
   .detail-hero-copy { padding: 50px 24px 65px; }
   .detail-back { margin-bottom: 40px; }
   .detail-hero h1 { font-size: 49px; }
@@ -377,5 +385,4 @@ footer { background: var(--sky); border-top: 1px solid #70b4c1; padding: 75px 8v
   .detail-information-grid article:last-child:nth-child(odd) { grid-column: auto; }
   .detail-information-grid article { padding: 30px 24px; }
   .detail-contact { padding: 75px 24px; }
-  .detail-whatsapp { right: 15px; bottom: 17px; }
 }

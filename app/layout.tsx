@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import FloatingSiteTools from "./components/FloatingSiteTools";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://zenttre.mx"),
@@ -32,7 +33,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body>{children}</body>
+      <body>
+        {children}
+        <FloatingSiteTools />
+      </body>
     </html>
   );
 }

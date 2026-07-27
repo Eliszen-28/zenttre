@@ -210,9 +210,6 @@ export default function ServiceDetailPage({
         </div>
       </footer>
 
-      <a className="detail-whatsapp" href={whatsapp} target="_blank" rel="noreferrer" aria-label={`Consultar ${serviceName} por WhatsApp`}>
-        <span>◉</span> WhatsApp
-      </a>
     </main>
   );
 }
