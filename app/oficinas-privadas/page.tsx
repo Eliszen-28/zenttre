@@ -11,9 +11,9 @@ export default function OficinasPrivadasPage() {
       secondaryImage="/images/07.jpg"
       serviceName="Oficinas equipadas"
       highlights={[
-        { value: "2–10", label: "personas por oficina" },
+        { value: "3–7", label: "personas por oficina" },
         { value: "24/7", label: "los 365 días del año" },
-        { value: "Desde $4,500", label: "mensuales + IVA" },
+        { value: "Desde $5,000", label: "mensuales + IVA" },
       ]}
       sectionTitle="Un espacio para tu empresa donde el profesionalismo y"
       sectionItalic="tu crecimiento son primordiales."
@@ -25,11 +25,8 @@ export default function OficinasPrivadasPage() {
         { title: "Áreas comunes", text: "Acceso a servicios y espacios compartidos de Zenttre." },
       ]}
       plans={[
-        { eyebrow: "OFICINA EQUIPADA", title: "Oficina A", description: "Oficina cómoda para 3 personas", details: ["5m²", "Bono salas $1,000"], price: "Mensuales $4,500 + IVA." },
-        { eyebrow: "OFICINA EQUIPADA", title: "Oficina para 10 personas", description: "Oficina cómoda para 10 personas aprox.", details: ["32m²", "Pantalla para proyección de 85″", "Aire acondicionado", "Conexiones múltiples para los equipos", "Wifi gratis", "Bono mensual de salas $1,900"], price: "Mensuales $13,400 + IVA." },
         { eyebrow: "OFICINA EQUIPADA", title: "Oficina Verde", description: "Oficina cómoda para 7 personas aprox.", details: ["32m²", "Aire acondicionado", "Conexiones múltiples para los equipos", "Wifi, agua y limpieza incluidos", "Bono mensual de salas $2,500"], price: "Mensuales $25,500 + IVA." },
         { eyebrow: "OFICINA EQUIPADA", title: "Oficina 205", description: "Oficina cómoda para 3 personas", details: ["6.6m²", "Wifi gratis", "Bono mensual de salas $1,200"], price: "Mensuales $5,000 + IVA." },
-        { eyebrow: "OFICINA EQUIPADA", title: "Oficina 604", description: "Oficina cómoda para 2 personas", details: ["5m²", "Conexiones múltiples para los equipos", "Wifi gratis", "Bono mensual de salas $1,200"], price: "Mensuales $5,000 + IVA." },
       ]}
       footnotes={["Los servicios de bebidas, copiado, impresiones y escaneo tienen costo adicional.", "Apple TV y HDMI están disponibles en salas con pantalla."]}
     />
