@@ -117,9 +117,9 @@ export default function Home() {
           <strong>Encuentra el espacio ideal para ti</strong>
         </div>
         <div className="finder-options">
-          <a href="#oficinas-privadas"><span>⌂</span> Oficina privada</a>
-          <a href="#salas-de-juntas"><span>◫</span> Sala de juntas</a>
-          <a href="#domicilio-empresas"><span>◎</span> Domicilio empresarial</a>
+          <a href="/oficinas-privadas"><span>⌂</span> Oficina privada</a>
+          <a href="/salas-de-juntas"><span>◫</span> Sala de juntas</a>
+          <a href="/domicilio-fiscal-comercial"><span>◎</span> Domicilio empresarial</a>
         </div>
         <a className="finder-go" href="#contacto" aria-label="Comenzar búsqueda">→</a>
       </section>
@@ -151,7 +151,7 @@ export default function Home() {
               <p className="service-tag">{service.tag}</p>
               <h3>{service.title}</h3>
               <p>{service.text}</p>
-              <a href="#contacto">Conoce más <span>↗</span></a>
+              <a href={index === 0 ? "/oficinas-privadas" : index === 1 ? "/salas-de-juntas" : index === 3 ? "/domicilio-fiscal-comercial" : "#contacto"}>Conoce más <span>↗</span></a>
             </div>
           </article>
         ))}
@@ -177,7 +177,7 @@ export default function Home() {
               <div><span>↗</span><p><strong>Espacios a la medida</strong>Opciones para equipos desde 2 hasta 10 personas.</p></div>
             </div>
             <div className="solution-actions">
-              <a className="button primary" href="#contacto">Cotizar una oficina <span>↗</span></a>
+              <a className="button primary" href="/oficinas-privadas">Ver oficinas privadas <span>↗</span></a>
               <a className="text-link" href="tel:+525520002619">Hablar con un asesor →</a>
             </div>
           </div>
@@ -205,7 +205,7 @@ export default function Home() {
               <span>Wi‑Fi</span><span>Pantalla</span><span>Pizarrón</span><span>Apple TV y HDMI</span>
             </div>
             <div className="solution-actions">
-              <a className="button primary" href="#contacto">Reservar una sala <span>↗</span></a>
+              <a className="button primary" href="/salas-de-juntas">Ver capacidades y precios <span>↗</span></a>
               <a className="text-link" href="https://wa.me/525579250612" target="_blank" rel="noreferrer">Consultar disponibilidad →</a>
             </div>
           </div>
@@ -240,7 +240,7 @@ export default function Home() {
             </div>
             <p className="plan-note">6% de descuento en pago semestral · 12% de descuento en pago anual.</p>
             <div className="solution-actions">
-              <a className="button primary" href="#contacto">Solicitar información <span>↗</span></a>
+              <a className="button primary" href="/domicilio-fiscal-comercial">Ver planes y beneficios <span>↗</span></a>
               <a className="text-link" href="mailto:mensajes@zenttre.com">Revisar requisitos →</a>
             </div>
           </div>

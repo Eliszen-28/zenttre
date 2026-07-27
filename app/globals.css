@@ -229,6 +229,50 @@ footer { background: var(--sky); border-top: 1px solid #70b4c1; padding: 75px 8v
 .sales-whatsapp > span { font-size: 18px; }
 .sales-agent-body > small { display: block; margin-top: 10px; text-align: center; color: #798486; font-size: 9px; }
 
+.detail-header { position: relative; }
+.detail-hero { min-height: 680px; display: grid; grid-template-columns: 49% 51%; background: var(--sky); }
+.detail-hero-copy { padding: 72px 7vw 80px 8vw; align-self: center; }
+.detail-back { display: inline-block; margin-bottom: 55px; color: var(--ink); font-size: 11px; font-weight: 800; border-bottom: 1px solid #6c969e; padding-bottom: 5px; }
+.detail-hero h1 { font-size: clamp(50px, 5.4vw, 78px); }
+.detail-hero-image { min-height: 680px; position: relative; overflow: hidden; }
+.detail-image-label { position: absolute; left: 0; bottom: 0; padding: 19px 26px; background: var(--white); color: var(--teal); font-size: 10px; font-weight: 900; letter-spacing: .13em; }
+.detail-highlights { min-height: 210px; display: grid; grid-template-columns: repeat(3, 1fr); align-items: stretch; background: var(--white); }
+.detail-highlights > div { position: relative; display: flex; flex-direction: column; justify-content: center; padding: 38px 5vw; border-right: 1px solid var(--line); }
+.detail-highlights > div:last-child { border-right: 0; }
+.detail-highlights span { position: absolute; top: 24px; left: 22px; color: var(--heading); font-size: 9px; font-weight: 900; }
+.detail-highlights strong { color: var(--ink); font-size: clamp(24px, 2.6vw, 38px); letter-spacing: -.04em; }
+.detail-highlights p { margin: 8px 0 0; color: var(--teal); font-size: 10px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.detail-story { display: grid; grid-template-columns: 48% 52%; min-height: 820px; background: #f1f8f9; }
+.detail-story-image { min-height: 820px; }
+.detail-story-copy { padding: 105px 8vw 95px 7vw; align-self: center; }
+.detail-story-copy h2 { font-size: clamp(42px, 4.5vw, 64px); }
+.detail-intro { margin: 30px 0 45px; line-height: 1.8; font-size: 15px; }
+.detail-benefits { border-top: 1px solid #c9dddd; }
+.detail-benefits article { display: grid; grid-template-columns: 38px 1fr; gap: 16px; padding: 20px 0; border-bottom: 1px solid #c9dddd; }
+.detail-benefits article > span { color: var(--teal); font-size: 10px; font-weight: 900; }
+.detail-benefits h3 { font-size: 17px; letter-spacing: -.02em; line-height: 1.2; margin-bottom: 5px; }
+.detail-benefits p { margin: 0; font-size: 12px; line-height: 1.6; }
+.detail-plans { padding-top: 120px; padding-bottom: 130px; }
+.detail-plans-heading { display: grid; grid-template-columns: 1fr 1.5fr; align-items: end; margin-bottom: 58px; }
+.detail-plans-heading .eyebrow { align-self: start; }
+.detail-plans-heading h2 { font-size: clamp(42px, 4.5vw, 65px); }
+.detail-plan-grid { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.detail-plan-grid article { min-height: 370px; padding: 48px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); display: flex; flex-direction: column; }
+.detail-plan-grid small { color: var(--teal); font-size: 9px; font-weight: 900; letter-spacing: .12em; }
+.detail-plan-grid h3 { font-size: clamp(28px, 3vw, 42px); margin: 22px 0 18px; }
+.detail-plan-grid p { max-width: 480px; margin: 0 0 25px; line-height: 1.7; }
+.detail-plan-grid strong { color: var(--ink); font-size: 18px; margin-bottom: 28px; }
+.detail-plan-grid a { margin-top: auto; color: var(--link); font-size: 12px; font-weight: 900; }
+.detail-contact { min-height: 390px; padding: 80px 8vw; background: var(--ink); display: grid; grid-template-columns: 1.25fr .75fr; gap: 8vw; align-items: center; }
+.detail-contact .eyebrow { color: var(--sky); }
+.detail-contact h2 { color: var(--white); font-size: clamp(40px, 4.6vw, 64px); }
+.detail-contact h2 em { color: var(--sky); }
+.detail-contact-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 19px; }
+.detail-contact-actions > a:not(.button) { color: var(--white); font-size: 13px; font-weight: 800; border-bottom: 1px solid #ffffff55; padding-bottom: 5px; }
+.detail-footer { grid-template-columns: 1.5fr 1fr 1fr; }
+.detail-footer a { color: var(--ink); }
+.detail-whatsapp { position: fixed; right: 22px; bottom: 22px; z-index: 45; min-height: 52px; padding: 0 20px; border-radius: 28px; display: flex; align-items: center; gap: 9px; background: #25d366; color: #103a20; box-shadow: 0 10px 30px #0003; font-size: 12px; font-weight: 900; }
+
 @media (max-width: 900px) {
   .site-header { height: 72px; padding: 0 22px; }
   .site-header .logo-image { width: 168px; height: 42px; }
@@ -254,6 +298,13 @@ footer { background: var(--sky); border-top: 1px solid #70b4c1; padding: 75px 8v
   .floating-card { right: 30px; }
   .contact { grid-template-columns: 1fr; }
   .footer-main { grid-template-columns: 1fr 1fr; }
+  .detail-nav { display: none; }
+  .detail-hero { grid-template-columns: 1fr; }
+  .detail-hero-image { min-height: 560px; }
+  .detail-story { grid-template-columns: 1fr; }
+  .detail-story-image { min-height: 560px; }
+  .detail-story-copy { padding: 90px 8vw; }
+  .detail-contact { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 620px) {
@@ -294,4 +345,18 @@ footer { background: var(--sky); border-top: 1px solid #70b4c1; padding: 75px 8v
   .footer-bottom { flex-direction: column; gap: 12px; }
   .sales-agent { right: 15px; bottom: 82px; }
   .sales-launcher { right: 15px; bottom: 17px; }
+  .detail-hero-copy { padding: 50px 24px 65px; }
+  .detail-back { margin-bottom: 40px; }
+  .detail-hero h1 { font-size: 49px; }
+  .detail-hero-image { min-height: 430px; }
+  .detail-highlights { grid-template-columns: 1fr; padding-left: 24px; padding-right: 24px; }
+  .detail-highlights > div { min-height: 145px; border-right: 0; border-bottom: 1px solid var(--line); padding-left: 38px; }
+  .detail-story-image { min-height: 430px; }
+  .detail-story-copy { padding: 75px 24px; }
+  .detail-plans { padding-top: 90px; padding-bottom: 90px; }
+  .detail-plans-heading, .detail-plan-grid { grid-template-columns: 1fr; }
+  .detail-plans-heading { gap: 10px; }
+  .detail-plan-grid article { min-height: 330px; padding: 34px 28px; }
+  .detail-contact { padding: 75px 24px; }
+  .detail-whatsapp { right: 15px; bottom: 17px; }
 }
