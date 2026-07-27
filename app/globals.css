@@ -63,9 +63,6 @@ h1 em, h2 em { color: var(--heading); font-family: "Mulish", Arial, sans-serif; 
 .hero-note p { margin: 0; font-size: 12px; line-height: 1.6; }
 .hero-note strong { color: var(--ink); font-size: 13px; }
 .pulse { width: 10px; height: 10px; background: var(--lime); border-radius: 50%; box-shadow: 0 0 0 6px #ccdc4b40; }
-.hero-stamp {
-  position: absolute; left: 41%; bottom: 19px; color: #ffffff30; font-size: 160px; font-weight: 900; line-height: 1; transform: rotate(-8deg);
-}
 
 .finder {
   width: min(1160px, 90vw); margin: -39px auto 0; min-height: 128px; background: var(--white); position: relative; z-index: 4;
@@ -284,7 +281,6 @@ footer { background: var(--sky); border-top: 1px solid #70b4c1; padding: 75px 8v
   .hero { grid-template-columns: 1fr; }
   .hero-copy { padding: 70px 7vw 55px; }
   .hero-image { margin: 0 20px 20px; min-height: 480px; }
-  .hero-stamp { display: none; }
   .finder { margin-top: 20px; grid-template-columns: 1fr; }
   .finder > div:first-child { border-right: 0; border-bottom: 1px solid var(--line); }
   .finder-go { min-height: 65px; }

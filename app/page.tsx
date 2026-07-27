@@ -108,7 +108,6 @@ export default function Home() {
             <p><strong>Oficinas disponibles</strong><br />Listas para trabajar</p>
           </div>
         </div>
-        <div className="hero-stamp" aria-hidden="true">Z</div>
       </section>
 
       <section className="finder" aria-label="Encuentra tu solución">
