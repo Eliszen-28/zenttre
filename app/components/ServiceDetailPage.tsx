@@ -93,7 +93,6 @@ export default function ServiceDetailPage({
             <a className="button primary" href={whatsapp} target="_blank" rel="noreferrer">
               Solicitar información <span>↗</span>
             </a>
-            <a className="text-link" href="tel:+525520002619">Llamar a un asesor →</a>
           </div>
         </div>
         <div className="detail-hero-image">

@@ -53,7 +53,6 @@ export default function Home() {
           </p>
           <div className="hero-actions">
             <a className="button primary" href="#soluciones">Explorar soluciones <span>↗</span></a>
-            <a className="text-link" href="tel:+525520002619">Hablar con un asesor <span>→</span></a>
           </div>
         </div>
         <div className="hero-image">
@@ -111,7 +110,6 @@ export default function Home() {
             </div>
             <div className="solution-actions">
               <a className="button primary" href="/oficinas-privadas">Ver oficinas privadas <span>↗</span></a>
-              <a className="text-link" href="tel:+525520002619">Hablar con un asesor →</a>
             </div>
           </div>
         </article>
