@@ -55,7 +55,7 @@ export default function Home() {
     <main>
       <header className="site-header">
         <a className="logo logo-image" href="#inicio" aria-label="Zenttre, inicio">
-          <img src="/zenttre-logo.png" alt="Zenttre smart office services" />
+          <img src="/zenttre-logo-v2.png" alt="Zenttre smart office services" />
         </a>
         <nav className={menuOpen ? "nav open" : "nav"} aria-label="Navegación principal">
           <a href="#soluciones" onClick={() => setMenuOpen(false)}>Soluciones</a>
@@ -331,7 +331,7 @@ export default function Home() {
         <div className="footer-main">
           <div>
             <a className="logo logo-image footer-logo" href="#inicio">
-              <img src="/zenttre-logo.png" alt="Zenttre smart office services" />
+              <img src="/zenttre-logo-v2.png" alt="Zenttre smart office services" />
             </a>
             <p>Oficinas a la medida para ti.</p>
           </div>
