@@ -171,7 +171,6 @@ export default function Home() {
             </div>
             <div className="solution-actions">
               <a className="button primary" href="/domicilio-fiscal-comercial">Ver planes y beneficios <span>↗</span></a>
-              <a className="text-link" href="mailto:mensajes@zenttre.com">Revisar requisitos →</a>
             </div>
           </div>
         </article>
