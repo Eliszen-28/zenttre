@@ -263,6 +263,8 @@ export default function AvisoDePrivacidadPage() {
             <small>LEGAL</small>
             <p>
               <a href="/aviso-de-privacidad">Aviso de privacidad</a>
+              <br />
+              <a href="/terminos-y-condiciones">Términos y condiciones</a>
             </p>
           </div>
         </div>

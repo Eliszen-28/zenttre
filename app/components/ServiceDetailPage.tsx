@@ -229,6 +229,7 @@ export default function ServiceDetailPage({
         <div className="footer-bottom">
           <span>© Zenttre 2026</span>
           <a href="/aviso-de-privacidad">Aviso de privacidad</a>
+          <a href="/terminos-y-condiciones">Términos y condiciones</a>
           <a href="/">Volver al inicio ↑</a>
         </div>
       </footer>
