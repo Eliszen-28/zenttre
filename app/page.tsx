@@ -311,7 +311,7 @@ export default function Home() {
         </div>
         <div className="footer-bottom">
           <span>© Zenttre 2026</span>
-          <span>Aviso de privacidad · Términos y condiciones</span>
+          <a href="/aviso-de-privacidad">Aviso de privacidad</a>
           <a href="#inicio">Volver arriba ↑</a>
         </div>
       </footer>
