@@ -54,7 +54,7 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-image">
-          <img src="/images/home-hero-drive.jpg" alt="Recepción de las oficinas Zenttre" />
+          <img src="/images/home-hero-arbol-zenttre.jpeg" alt="Patio arbolado de las oficinas Zenttre" />
           <div className="hero-note">
             <span className="pulse" />
             <p><strong>Oficinas disponibles</strong><br />Listas para trabajar</p>
