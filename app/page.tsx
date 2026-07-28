@@ -198,8 +198,8 @@ export default function Home() {
         <div className="benefit-image">
           <img src="/images/06.jpg" alt="Área de trabajo compartida en Zenttre" />
           <div className="floating-card">
-            <strong>+1,000</strong>
-            <span>clientes frecuentes</span>
+            <strong>25 años</strong>
+            <span>acompañando tu crecimiento</span>
           </div>
         </div>
         <div className="benefit-copy">
