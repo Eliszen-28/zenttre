@@ -13,10 +13,12 @@ export default function FloatingSiteTools() {
   const [salesOpen, setSalesOpen] = useState(false);
   const [salesService, setSalesService] = useState("");
 
-  const whatsappMessage = salesService
+  const emailMessage = salesService
     ? `Hola, me interesa recibir información sobre ${salesService}. ¿Podrían ayudarme?`
     : "Hola, me gustaría recibir información sobre los servicios de Zenttre.";
-  const whatsappUrl = `https://wa.me/525579250612?text=${encodeURIComponent(whatsappMessage)}`;
+  const emailUrl = `mailto:mensajes@zenttre.com?subject=${encodeURIComponent(
+    `Información sobre ${salesService || "servicios Zenttre"}`,
+  )}&body=${encodeURIComponent(emailMessage)}`;
 
   return (
     <>
@@ -58,17 +60,15 @@ export default function FloatingSiteTools() {
               ))}
             </div>
             <a
-              className={salesService ? "sales-whatsapp ready" : "sales-whatsapp"}
-              href={salesService ? whatsappUrl : undefined}
-              target="_blank"
-              rel="noreferrer"
+              className={salesService ? "sales-email ready" : "sales-email"}
+              href={salesService ? emailUrl : undefined}
               aria-disabled={!salesService}
               onClick={(event) => {
                 if (!salesService) event.preventDefault();
               }}
             >
-              <span>◉</span>
-              {salesService ? "Continuar en WhatsApp" : "Selecciona un servicio"}
+              <span>✉</span>
+              {salesService ? "Continuar por correo" : "Selecciona un servicio"}
             </a>
             <small>Te conectaremos con un asesor de ventas.</small>
           </div>

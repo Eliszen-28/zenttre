@@ -210,9 +210,9 @@ footer { background: var(--sky); border-top: 1px solid #70b4c1; padding: 75px 8v
 .sales-options button { width: 100%; min-height: 44px; border: 1px solid #c5dadd; border-radius: 3px; background: var(--white); color: var(--ink); display: flex; align-items: center; gap: 11px; padding: 0 13px; text-align: left; font-size: 11px; font-weight: 700; cursor: pointer; }
 .sales-options button:hover, .sales-options button.selected { border-color: var(--teal); background: #e9f5f6; }
 .sales-options button span { color: var(--teal); font-size: 13px; }
-.sales-whatsapp { min-height: 49px; padding: 0 16px; display: flex; align-items: center; justify-content: center; gap: 10px; border-radius: 3px; background: #d9dede; color: #747a7a; font-size: 12px; font-weight: 900; cursor: not-allowed; }
-.sales-whatsapp.ready { background: #25d366; color: #103a20; cursor: pointer; }
-.sales-whatsapp > span { font-size: 18px; }
+.sales-email { min-height: 49px; padding: 0 16px; display: flex; align-items: center; justify-content: center; gap: 10px; border-radius: 3px; background: #d9dede; color: #747a7a; font-size: 12px; font-weight: 900; cursor: not-allowed; }
+.sales-email.ready { background: var(--lime); color: var(--button-text); cursor: pointer; }
+.sales-email > span { font-size: 18px; }
 .sales-agent-body > small { display: block; margin-top: 10px; text-align: center; color: #798486; font-size: 9px; }
 .back-to-top {
   position: fixed; left: 22px; bottom: 22px; z-index: 38; min-height: 48px; padding: 0 18px;
@@ -415,7 +415,7 @@ footer { background: var(--sky); border-top: 1px solid #70b4c1; padding: 75px 8v
 .detail-plan-grid a,
 .detail-contact-actions > a:not(.button) { font-size: 14.4px; }
 .sales-launcher,
-.sales-whatsapp { font-size: 14.4px; }
+.sales-email { font-size: 14.4px; }
 .sales-options button { font-size: 13.2px; }
 .back-to-top { font-size: 13.2px; }
 

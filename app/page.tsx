@@ -135,7 +135,7 @@ export default function Home() {
             </div>
             <div className="solution-actions">
               <a className="button primary" href="/salas-de-juntas">Ver capacidades y precios <span>↗</span></a>
-              <a className="text-link" href="https://wa.me/525579250612" target="_blank" rel="noreferrer">Consultar disponibilidad →</a>
+              <a className="text-link" href="mailto:mensajes@zenttre.com?subject=Disponibilidad%20de%20salas%20de%20juntas">Consultar disponibilidad →</a>
             </div>
           </div>
         </article>
@@ -248,8 +248,8 @@ export default function Home() {
             <a href="mailto:mensajes@zenttre.com">
               <span>02</span><div><small>ESCRÍBENOS</small><strong>mensajes@zenttre.com</strong></div><b>↗</b>
             </a>
-            <a href="https://wa.me/525579250612" target="_blank" rel="noreferrer">
-              <span>03</span><div><small>WHATSAPP</small><strong>(55) 79 250612</strong></div><b>↗</b>
+            <a href="mailto:mensajes@zenttre.com?subject=Solicitud%20de%20cotización">
+              <span>03</span><div><small>COTIZACIONES</small><strong>mensajes@zenttre.com</strong></div><b>↗</b>
             </a>
           </div>
         </div>

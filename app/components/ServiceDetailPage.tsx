@@ -62,7 +62,9 @@ export default function ServiceDetailPage({
   footnotes,
   showVirtualOffer,
 }: ServiceDetailPageProps) {
-  const whatsapp = `https://wa.me/525579250612?text=${encodeURIComponent(
+  const email = `mailto:mensajes@zenttre.com?subject=${encodeURIComponent(
+    `Información sobre ${serviceName}`,
+  )}&body=${encodeURIComponent(
     `Hola, me interesa recibir información sobre ${serviceName}. ¿Podrían ayudarme?`,
   )}`;
 
@@ -78,7 +80,7 @@ export default function ServiceDetailPage({
           <a href="/salas-de-juntas">Salas de juntas</a>
           <a href="/domicilio-fiscal-comercial">Domicilio fiscal</a>
         </nav>
-        <a className="header-cta" href={whatsapp} target="_blank" rel="noreferrer">
+        <a className="header-cta" href={email}>
           Contactar <span>→</span>
         </a>
       </header>
@@ -90,7 +92,7 @@ export default function ServiceDetailPage({
           <h1>{title} <em>{italicTitle}</em></h1>
           <p className="hero-lead">{intro}</p>
           <div className="hero-actions">
-            <a className="button primary" href={whatsapp} target="_blank" rel="noreferrer">
+            <a className="button primary" href={email}>
               Solicitar información <span>↗</span>
             </a>
           </div>
@@ -157,7 +159,7 @@ export default function ServiceDetailPage({
                 )}
                 {plan.price && <strong>{plan.price}</strong>}
                 {plan.notice && <p className="detail-plan-notice">{plan.notice}</p>}
-                <a href={whatsapp} target="_blank" rel="noreferrer">Consultar disponibilidad <span>↗</span></a>
+                <a href={email}>Consultar disponibilidad <span>↗</span></a>
               </article>
             ))}
           </div>
@@ -205,8 +207,8 @@ export default function ServiceDetailPage({
           <h2>Encuentra la solución que tu empresa <em>necesita.</em></h2>
         </div>
         <div className="detail-contact-actions">
-          <a className="button primary" href={whatsapp} target="_blank" rel="noreferrer">
-            Escribir por WhatsApp <span>↗</span>
+          <a className="button primary" href={email}>
+            Enviar correo <span>↗</span>
           </a>
           <a href="mailto:mensajes@zenttre.com">mensajes@zenttre.com →</a>
           <a href="tel:+525520002619">(55) 2000 2619 →</a>
