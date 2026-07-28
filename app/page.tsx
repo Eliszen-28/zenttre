@@ -7,8 +7,6 @@ const gallery = [
   "/images/02.jpg",
   "/images/07.jpg",
   "/images/05.jpg",
-  "/images/11.jpg",
-  "/images/14.jpg",
 ];
 
 export default function Home() {
