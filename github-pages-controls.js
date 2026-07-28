@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="sales-options">
           ${services.map((service) => `<button type="button" data-service="${service}"><span>→</span>${service}</button>`).join("")}
         </div>
-        <a class="sales-whatsapp" aria-disabled="true"><span>◉</span>Selecciona un servicio</a>
+        <a class="sales-email" aria-disabled="true"><span>✉</span>Selecciona un servicio</a>
         <small>Te conectaremos con un asesor de ventas.</small>
       </div>`;
 
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
     launcher.innerHTML = "<span>×</span><b>Cerrar</b>";
 
     agent.querySelector(".sales-agent-head button")?.addEventListener("click", closeAgent);
-    const whatsapp = agent.querySelector(".sales-whatsapp");
+    const email = agent.querySelector(".sales-email");
 
     agent.querySelectorAll("[data-service]").forEach((button) => {
       button.addEventListener("click", () => {
@@ -62,12 +62,10 @@ document.addEventListener("DOMContentLoaded", () => {
           item.querySelector("span").textContent = item === button ? "✓" : "→";
         });
         const message = `Hola, me interesa recibir información sobre ${selectedService}. ¿Podrían ayudarme?`;
-        whatsapp.href = `https://wa.me/525579250612?text=${encodeURIComponent(message)}`;
-        whatsapp.target = "_blank";
-        whatsapp.rel = "noreferrer";
-        whatsapp.classList.add("ready");
-        whatsapp.setAttribute("aria-disabled", "false");
-        whatsapp.innerHTML = "<span>◉</span>Continuar en WhatsApp";
+        email.href = `mailto:mensajes@zenttre.com?subject=${encodeURIComponent(`Información sobre ${selectedService}`)}&body=${encodeURIComponent(message)}`;
+        email.classList.add("ready");
+        email.setAttribute("aria-disabled", "false");
+        email.innerHTML = "<span>✉</span>Continuar por correo";
       });
     });
   };
