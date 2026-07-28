@@ -11,7 +11,7 @@ export default function OficinasPrivadasPage() {
       secondaryImage="/images/07.jpg"
       serviceName="Oficinas equipadas"
       highlights={[
-        { value: "3–7", label: "personas por oficina" },
+        { value: "1 - 7", label: "personas por oficina" },
         { value: "24/7", label: "los 365 días del año" },
         { value: "Desde $5,000", label: "mensuales + IVA" },
       ]}
