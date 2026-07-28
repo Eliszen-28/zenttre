@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const salesOptions = [
   "Oficina equipada",
@@ -12,6 +12,25 @@ const salesOptions = [
 export default function FloatingSiteTools() {
   const [salesOpen, setSalesOpen] = useState(false);
   const [salesService, setSalesService] = useState("");
+
+  useEffect(() => {
+    const footer = document.querySelector("footer");
+    if (!footer) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        document.body.classList.toggle("footer-in-view", entry.isIntersecting);
+        if (entry.isIntersecting) setSalesOpen(false);
+      },
+      { threshold: 0.08 },
+    );
+
+    observer.observe(footer);
+    return () => {
+      observer.disconnect();
+      document.body.classList.remove("footer-in-view");
+    };
+  }, []);
 
   const emailMessage = salesService
     ? `Hola, me interesa recibir información sobre ${salesService}. ¿Podrían ayudarme?`
