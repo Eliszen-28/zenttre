@@ -7,7 +7,7 @@ export default function SalasDeJuntasPage() {
       title="Alternativas para"
       italicTitle="tus reuniones."
       intro="Oficinas y salas acordes a lo que necesitas, con capacidades de 3 a 10 personas."
-      heroImage="/images/salas/sala-b.jpg"
+      heroImage="/images/salas/sala-b-drive.jpg"
       secondaryImage="/images/salas/sala-d.jpg"
       serviceName="Salas de juntas"
       highlights={[
@@ -27,7 +27,7 @@ export default function SalasDeJuntasPage() {
       plans={[
         { eyebrow: "MÁXIMO 4 PERSONAS", title: "Sala A", image: "/images/salas/sala-a.jpg", description: "Cómoda y práctica, ideal para reuniones breves.", details: ["Wi‑Fi", "Pizarrón", "Servicio de bebidas disponible en recepción"], price: "$100.00 por hora + IVA" },
         { eyebrow: "MÁXIMO 4 PERSONAS", title: "Sala A+", image: "/images/salas/sala-a-plus.jpg", description: "Estilo inglés modernista con una cortina que aísla el sonido y la luz externa.", details: ["Wi‑Fi", "Pantalla"], price: "$220.00 por hora + IVA" },
-        { eyebrow: "MÁXIMO 10 PERSONAS", title: "Sala B", image: "/images/salas/sala-b.jpg", description: "Vibrante y elegante para juntas importantes con total comodidad.", details: ["Wi‑Fi", "Pantalla", "Sistema de aislamiento", "Pizarrón"], price: "$320.00 por hora + IVA" },
+        { eyebrow: "MÁXIMO 10 PERSONAS", title: "Sala B", image: "/images/salas/sala-b-drive.jpg", description: "Vibrante y elegante para juntas importantes con total comodidad.", details: ["Wi‑Fi", "Pantalla", "Sistema de aislamiento", "Pizarrón"], price: "$320.00 por hora + IVA" },
         { eyebrow: "MÁXIMO 10 PERSONAS", title: "Sala C", image: "/images/salas/sala-c.jpg", description: "Sofisticada y privada para dar presencia y confidencialidad a tus reuniones.", details: ["Wi‑Fi", "Sistema de aislamiento", "Pantalla", "Pizarrón"], price: "$280.00 por hora + IVA" },
         { eyebrow: "MÁXIMO 10 PERSONAS", title: "Sala D", image: "/images/salas/sala-d.jpg", description: "Espaciosa, con estilo ecléctico, ideal para reuniones con colaboradores.", details: ["Wi‑Fi", "Apta para consumo de alimentos y bebidas", "Pantalla", "Vista a las áreas comunes"], price: "$280.00 por hora + IVA", notice: "No disponible de lunes a viernes de 14:00 a 17:00 horas." },
         { eyebrow: "MÁXIMO 3 PERSONAS", title: "Sala B1", image: "/images/salas/sala-b1.jpg", description: "Franjas orgánicas estilo bambú para reuniones confidenciales, con estilo y frescura.", price: "$150.00 por hora + IVA" },
