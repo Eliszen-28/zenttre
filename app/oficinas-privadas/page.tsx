@@ -7,7 +7,7 @@ export default function OficinasPrivadasPage() {
       title="Aquí tenemos un espacio"
       italicTitle="a tu medida."
       intro="Espacios con mobiliario incluido, acceso a todos los servicios y áreas comunes."
-      heroImage="/images/04.jpg"
+      heroImage="/images/oficinas-privadas-hero-drive.jpg"
       secondaryImage="/images/07.jpg"
       serviceName="Oficinas equipadas"
       highlights={[
