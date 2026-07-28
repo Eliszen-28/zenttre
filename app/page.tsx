@@ -90,7 +90,7 @@ export default function Home() {
       <section className="solution-details" aria-label="Soluciones de trabajo Zenttre">
         <article className="solution-panel" id="oficinas-privadas">
           <div className="solution-visual">
-            <img src="/images/home-tu-espacio-equipo-mg8050.jpg" alt="Área de trabajo de Zenttre" />
+            <img src="/images/home-tu-espacio-equipo-mg8043.jpg" alt="Área de trabajo de Zenttre" />
             <div className="solution-index"><span>01</span> OFICINAS PRIVADAS</div>
           </div>
           <div className="solution-content">
