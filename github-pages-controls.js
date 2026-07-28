@@ -1,4 +1,25 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const footer = document.querySelector("footer");
+  if (footer) {
+    const footerObserver = new IntersectionObserver(
+      ([entry]) => {
+        document.body.classList.toggle("footer-in-view", entry.isIntersecting);
+        if (entry.isIntersecting) {
+          document.querySelector(".sales-agent")?.remove();
+          agent = null;
+          const footerLauncher = document.querySelector(".sales-launcher");
+          footerLauncher?.classList.remove("active");
+          footerLauncher?.setAttribute("aria-expanded", "false");
+          if (footerLauncher) {
+            footerLauncher.innerHTML = "<span>◉</span><b>Agente de ventas</b><i></i>";
+          }
+        }
+      },
+      { threshold: 0.08 },
+    );
+    footerObserver.observe(footer);
+  }
+
   const backToTop = document.querySelector(".back-to-top");
   backToTop?.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
