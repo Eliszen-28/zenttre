@@ -202,7 +202,7 @@ export default function ServiceDetailPage({
       <section className="detail-contact">
         <div>
           <p className="eyebrow">HABLEMOS DE TU EMPRESA</p>
-          <h2>Encuentra la solución que tu negocio <em>necesita.</em></h2>
+          <h2>Encuentra la solución que tu empresa <em>necesita.</em></h2>
         </div>
         <div className="detail-contact-actions">
           <a className="button primary" href={whatsapp} target="_blank" rel="noreferrer">
