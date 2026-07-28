@@ -44,7 +44,7 @@ export default function Home() {
       <section className="hero" id="inicio">
         <div className="hero-copy">
           <p className="eyebrow">ESPACIOS DE TRABAJO · COLONIA DEL VALLE</p>
-          <h1>Tu próxima oficina empieza <em>aquí.</em></h1>
+          <h1>Tu éxito comienza <em>aquí.</em></h1>
           <p className="hero-lead">
             Oficinas, salas y servicios virtuales pensados para que tu empresa
             trabaje mejor, crezca y se sienta en casa.
