@@ -230,6 +230,7 @@ export default function ServiceDetailPage({
           <span>© Zenttre 2026</span>
           <a href="/aviso-de-privacidad">Aviso de privacidad</a>
           <a href="/terminos-y-condiciones">Términos y condiciones</a>
+          <span>Made with love by <a href="https://www.zooule.com" target="_blank" rel="noreferrer">Zooule</a></span>
           <a href="/">Volver al inicio ↑</a>
         </div>
       </footer>
