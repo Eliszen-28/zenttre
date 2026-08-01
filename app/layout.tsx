@@ -61,8 +61,9 @@ export const metadata: Metadata = {
     images: ["/og.png"],
   },
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
+    icon: [{ url: "/favicon-black-z.png", type: "image/png", sizes: "512x512" }],
+    shortcut: "/favicon-black-z.png",
+    apple: "/favicon-black-z.png",
   },
 };
 
