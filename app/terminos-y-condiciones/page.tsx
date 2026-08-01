@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Términos y Condiciones | Zenttre",
+  title: "Términos y Condiciones",
   description: "Términos y Condiciones de uso y contratación de Zenttre.",
+  alternates: { canonical: "/terminos-y-condiciones/" },
+  robots: { index: true, follow: true },
 };
 
 export default function TerminosYCondicionesPage() {

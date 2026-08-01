@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Aviso de Privacidad Integral | Zenttre",
+  title: "Aviso de Privacidad Integral",
   description: "Aviso de Privacidad Integral de Zenttre.",
+  alternates: { canonical: "/aviso-de-privacidad/" },
+  robots: { index: true, follow: true },
 };
 
 export default function AvisoDePrivacidadPage() {

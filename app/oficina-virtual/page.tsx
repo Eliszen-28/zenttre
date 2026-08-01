@@ -1,4 +1,12 @@
+import type { Metadata } from "next";
 import ServiceDetailPage from "../components/ServiceDetailPage";
+
+export const metadata: Metadata = {
+  title: "Oficina virtual en Colonia del Valle, CDMX",
+  description: "Oficina virtual en CDMX con domicilio comercial o fiscal, recepción de mensajería, atención de visitas y crédito para salas desde $1,150 + IVA.",
+  alternates: { canonical: "/oficina-virtual/" },
+  openGraph: { title: "Oficina virtual en Colonia del Valle | Zenttre", description: "Presencia profesional en CDMX sin los gastos de una oficina física.", url: "/oficina-virtual/" },
+};
 
 export default function OficinaVirtualPage() {
   return (

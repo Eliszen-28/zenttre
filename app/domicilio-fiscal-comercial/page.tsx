@@ -1,4 +1,12 @@
+import type { Metadata } from "next";
 import ServiceDetailPage from "../components/ServiceDetailPage";
+
+export const metadata: Metadata = {
+  title: "Domicilio fiscal y comercial en CDMX",
+  description: "Domicilio fiscal y comercial para empresas en la Colonia del Valle, CDMX. Recepción de documentos, Wi-Fi y atención profesional desde $880 + IVA.",
+  alternates: { canonical: "/domicilio-fiscal-comercial/" },
+  openGraph: { title: "Domicilio fiscal y comercial en CDMX | Zenttre", description: "Una dirección profesional para tu empresa en la Colonia del Valle.", url: "/domicilio-fiscal-comercial/" },
+};
 
 export default function DomicilioFiscalComercialPage() {
   return (

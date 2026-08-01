@@ -1,4 +1,12 @@
+import type { Metadata } from "next";
 import ServiceDetailPage from "../components/ServiceDetailPage";
+
+export const metadata: Metadata = {
+  title: "Salas de juntas en Colonia del Valle desde $100",
+  description: "Renta salas de juntas en la Colonia del Valle, CDMX, para 3 a 10 personas. Wi-Fi, pantalla, pizarrón y HDMI desde $100 por hora + IVA.",
+  alternates: { canonical: "/salas-de-juntas/" },
+  openGraph: { title: "Salas de juntas en Colonia del Valle | Zenttre", description: "Seis salas para reuniones de 3 a 10 personas, disponibles por hora en CDMX.", url: "/salas-de-juntas/" },
+};
 
 export default function SalasDeJuntasPage() {
   return (

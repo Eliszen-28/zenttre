@@ -1,4 +1,12 @@
+import type { Metadata } from "next";
 import ServiceDetailPage from "../components/ServiceDetailPage";
+
+export const metadata: Metadata = {
+  title: "Oficinas equipadas en Colonia del Valle, CDMX",
+  description: "Renta oficinas privadas equipadas para 1 a 7 personas en la Colonia del Valle. Acceso 24/7, Wi-Fi, mobiliario y servicios incluidos desde $5,000 + IVA.",
+  alternates: { canonical: "/oficinas-privadas/" },
+  openGraph: { title: "Oficinas equipadas en Colonia del Valle | Zenttre", description: "Oficinas privadas listas para trabajar en CDMX, con servicios incluidos y acceso 24/7.", url: "/oficinas-privadas/" },
+};
 
 export default function OficinasPrivadasPage() {
   return (
