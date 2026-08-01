@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 
-const adsId = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID;
+const adsId = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || "AW-7181660965";
 const adsConversionLabel = process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_LABEL;
 
 declare global {

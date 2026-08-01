@@ -285,6 +285,31 @@ export default function Home() {
         </form>
       </section>
 
+      <section className="location-section" aria-labelledby="ubicacion-title">
+        <div className="location-copy">
+          <p className="eyebrow">UBICACIÓN · COLONIA DEL VALLE</p>
+          <h2 id="ubicacion-title">Visítanos en una ubicación <em>estratégica.</em></h2>
+          <p>Aniceto Ortega 817, Col. Del Valle, Alcaldía Benito Juárez, C.P. 03100, Ciudad de México.</p>
+          <a
+            className="button primary"
+            href="https://www.google.com/maps/search/?api=1&query=Zenttre%2C%20Aniceto%20Ortega%20817%2C%20Colonia%20del%20Valle%2C%20CDMX"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Ver en Google Maps <span>↗</span>
+          </a>
+        </div>
+        <div className="location-map">
+          <iframe
+            title="Ubicación de Zenttre en Google Maps"
+            src="https://www.google.com/maps?q=Zenttre%2C%20Aniceto%20Ortega%20817%2C%20Colonia%20del%20Valle%2C%20CDMX&output=embed"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            allowFullScreen
+          />
+        </div>
+      </section>
+
       <footer>
         <div className="footer-main">
           <div>
@@ -295,7 +320,7 @@ export default function Home() {
           </div>
           <div>
             <small>VISÍTANOS</small>
-            <p>Aniceto Ortega 817<br />Col. Del Valle, CDMX<br />C.P. 03100</p>
+            <p>Aniceto Ortega 817<br />Col. Del Valle, CDMX<br />C.P. 03100<br /><a href="https://www.google.com/maps/search/?api=1&query=Zenttre%2C%20Aniceto%20Ortega%20817%2C%20Colonia%20del%20Valle%2C%20CDMX" target="_blank" rel="noreferrer">Cómo llegar en Google Maps ↗</a></p>
           </div>
           <div>
             <small>HORARIO</small>

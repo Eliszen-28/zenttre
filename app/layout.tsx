@@ -4,9 +4,10 @@ import FloatingSiteTools from "./components/FloatingSiteTools";
 import GoogleTracking from "./components/GoogleTracking";
 
 const siteUrl = "https://zenttre.mx";
+const googleMapsUrl = "https://www.google.com/maps/search/?api=1&query=Zenttre%2C%20Aniceto%20Ortega%20817%2C%20Colonia%20del%20Valle%2C%20CDMX";
 const googleTagIds = [
   process.env.NEXT_PUBLIC_GOOGLE_TAG_ID,
-  process.env.NEXT_PUBLIC_GOOGLE_ADS_ID,
+  process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || "AW-7181660965",
 ].filter((id, index, ids): id is string => Boolean(id) && ids.indexOf(id) === index);
 
 export const metadata: Metadata = {
@@ -100,6 +101,8 @@ export default function RootLayout({
               telephone: "+52 55 2000 2619",
               email: "mensajes@zenttre.com",
               priceRange: "$$",
+              hasMap: googleMapsUrl,
+              sameAs: [googleMapsUrl],
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "Aniceto Ortega 817",
