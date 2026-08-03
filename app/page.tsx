@@ -233,10 +233,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="quote-strip">
-        <img src="/thenewworkexperience.jpg" alt="The new work experience" />
-      </section>
-
       <section className="contact section-pad" id="contacto">
         <div className="contact-copy">
           <p className="eyebrow">HABLEMOS</p>
