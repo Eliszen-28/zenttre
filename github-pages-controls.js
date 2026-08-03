@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
     agent.setAttribute("aria-label", "Agente de ventas Zenttre");
     agent.innerHTML = `
       <div class="sales-agent-head">
-        <div class="sales-avatar">Z</div>
+        <div class="sales-avatar"><img src="/zenttre/images/sales-agent-zenttre.jpg" alt="" aria-hidden="true"></div>
         <div><strong>Agente Zenttre</strong><span><i></i> En línea</span></div>
         <button type="button" aria-label="Cerrar agente de ventas">×</button>
       </div>
