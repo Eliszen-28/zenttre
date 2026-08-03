@@ -228,6 +228,11 @@ footer { background: var(--sky); border-top: 1px solid #70b4c1; padding: 75px 8v
 .sales-options button { width: 100%; min-height: 44px; border: 1px solid #c5dadd; border-radius: 3px; background: var(--white); color: var(--ink); display: flex; align-items: center; gap: 11px; padding: 0 13px; text-align: left; font-size: 11px; font-weight: 700; cursor: pointer; }
 .sales-options button:hover, .sales-options button.selected { border-color: var(--teal); background: #e9f5f6; }
 .sales-options button span { color: var(--teal); font-size: 13px; }
+.sales-people { display: grid; gap: 8px; margin: -3px 0 17px; }
+.sales-people label { color: var(--ink); font-size: 13px; line-height: 1.4; font-weight: 800; }
+.sales-people input { width: 100%; min-height: 46px; border: 1px solid #c5dadd; border-radius: 3px; background: var(--white); color: var(--ink); padding: 0 13px; font: inherit; font-size: 14px; }
+.sales-people input:focus { outline: 2px solid var(--lime); outline-offset: 1px; border-color: var(--teal); }
+.sales-routing-message { margin: 0 0 15px; border-left: 4px solid var(--lime); background: #edf5f6; color: var(--ink); padding: 11px 13px; font-size: 12px; line-height: 1.45; font-weight: 700; }
 .sales-email { min-height: 49px; padding: 0 16px; display: flex; align-items: center; justify-content: center; gap: 10px; border-radius: 3px; background: #d9dede; color: #747a7a; font-size: 12px; font-weight: 900; cursor: not-allowed; }
 .sales-email.ready { background: var(--lime); color: var(--button-text); cursor: pointer; }
 .sales-email > span { font-size: 18px; }

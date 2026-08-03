@@ -12,6 +12,7 @@ const salesOptions = [
 export default function FloatingSiteTools() {
   const [salesOpen, setSalesOpen] = useState(false);
   const [salesService, setSalesService] = useState("");
+  const [people, setPeople] = useState("");
 
   useEffect(() => {
     const footer = document.querySelector("footer");
@@ -32,12 +33,12 @@ export default function FloatingSiteTools() {
     };
   }, []);
 
-  const emailMessage = salesService
-    ? `Hola, me interesa recibir información sobre ${salesService}. ¿Podrían ayudarme?`
-    : "Hola, me gustaría recibir información sobre los servicios de Zenttre.";
-  const emailUrl = `mailto:mensajes@zenttre.com?subject=${encodeURIComponent(
-    `Información sobre ${salesService || "servicios Zenttre"}`,
-  )}&body=${encodeURIComponent(emailMessage)}`;
+  const asksForPeople = salesService === "Oficina equipada" || salesService === "Sala de juntas";
+  const canContinue = Boolean(salesService) && (!asksForPeople || Number(people) > 0);
+  const whatsappMessage = `¡Hola! Nos da mucho gusto recibir tu mensaje. Me interesa ${salesService.toLowerCase()}${
+    asksForPeople ? ` para ${people} ${Number(people) === 1 ? "persona" : "personas"}` : ""
+  }. Entiendo que mi solicitud será canalizada al área de ventas.`;
+  const whatsappUrl = `https://wa.me/525520002619?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
     <>
@@ -70,7 +71,10 @@ export default function FloatingSiteTools() {
                 <button
                   type="button"
                   className={salesService === option ? "selected" : ""}
-                  onClick={() => setSalesService(option)}
+                  onClick={() => {
+                    setSalesService(option);
+                    setPeople("");
+                  }}
                   key={option}
                 >
                   <span>{salesService === option ? "✓" : "→"}</span>
@@ -78,18 +82,48 @@ export default function FloatingSiteTools() {
                 </button>
               ))}
             </div>
+
+            {asksForPeople && (
+              <div className="sales-people">
+                <label htmlFor="sales-people-count">
+                  ¿Para cuántas personas buscas {salesService === "Sala de juntas" ? "la sala de juntas" : "la oficina"}?
+                </label>
+                <input
+                  id="sales-people-count"
+                  type="number"
+                  min="1"
+                  inputMode="numeric"
+                  value={people}
+                  onChange={(event) => setPeople(event.target.value)}
+                  placeholder="Número de personas"
+                />
+              </div>
+            )}
+
+            {canContinue && (
+              <div className="sales-routing-message" role="status">
+                Nos da mucho gusto recibir tu mensaje. Tu solicitud será canalizada al área de ventas.
+              </div>
+            )}
+
             <a
-              className={salesService ? "sales-email ready" : "sales-email"}
-              href={salesService ? emailUrl : undefined}
-              aria-disabled={!salesService}
+              className={canContinue ? "sales-email ready" : "sales-email"}
+              href={canContinue ? whatsappUrl : undefined}
+              target={canContinue ? "_blank" : undefined}
+              rel={canContinue ? "noopener noreferrer" : undefined}
+              aria-disabled={!canContinue}
               onClick={(event) => {
-                if (!salesService) event.preventDefault();
+                if (!canContinue) event.preventDefault();
               }}
             >
-              <span>✉</span>
-              {salesService ? "Continuar por correo" : "Selecciona un servicio"}
+              <span>◉</span>
+              {!salesService
+                ? "Selecciona un servicio"
+                : asksForPeople && !canContinue
+                  ? "Indica el número de personas"
+                  : "Continuar en WhatsApp Business"}
             </a>
-            <small>Te conectaremos con un asesor de ventas.</small>
+            <small>Te conectaremos con nuestra área de ventas.</small>
           </div>
         </aside>
       )}
