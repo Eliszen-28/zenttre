@@ -217,8 +217,8 @@ footer { background: var(--sky); border-top: 1px solid #70b4c1; padding: 75px 8v
 .sales-agent-head { min-height: 88px; padding: 18px 20px; display: grid; grid-template-columns: 46px 1fr auto; gap: 12px; align-items: center; background: #5D8693; color: #161922; }
 .sales-avatar { width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; background: #FFFFFF; color: #161922; overflow: hidden; }
 .sales-avatar img { width: 100%; height: 100%; object-fit: contain; }
-.sales-agent-head strong { display: block; font-size: 14px; }
-.sales-agent-head span { display: flex; align-items: center; gap: 6px; margin-top: 5px; font-size: 10px; opacity: .9; }
+.sales-agent-head strong { display: block; color: #FFFFFF; font-size: 14px; }
+.sales-agent-head span { display: flex; align-items: center; gap: 6px; margin-top: 5px; color: #FFFFFF; font-size: 10px; opacity: .9; }
 .sales-agent-head span i { width: 7px; height: 7px; border-radius: 50%; background: #4C888C; }
 .sales-agent-head button { align-self: start; border: 0; background: transparent; color: #161922; font-size: 23px; cursor: pointer; }
 .sales-agent-body { padding: 22px; background: #FFFFFF; }
