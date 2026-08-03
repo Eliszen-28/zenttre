@@ -210,17 +210,18 @@ footer { background: var(--sky); border-top: 1px solid #70b4c1; padding: 75px 8v
 .sales-launcher.active { background: #4C888C; color: #161922; }
 .sales-agent {
   position: fixed; right: 22px; bottom: 87px; z-index: 39; width: min(365px, calc(100vw - 30px));
-  background: #93D1DE; border-radius: 8px; overflow: hidden; box-shadow: 0 18px 55px #16192240;
+  background: #FFFFFF; border-radius: 8px; overflow: hidden; box-shadow: 0 18px 55px #16192240;
   animation: agent-in .25s ease both;
 }
 @keyframes agent-in { from { opacity: 0; transform: translateY(12px) scale(.98); } to { opacity: 1; transform: none; } }
 .sales-agent-head { min-height: 88px; padding: 18px 20px; display: grid; grid-template-columns: 46px 1fr auto; gap: 12px; align-items: center; background: #5D8693; color: #161922; }
-.sales-avatar { width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; background: #93D1DE; color: #161922; font-size: 20px; font-weight: 900; }
+.sales-avatar { width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; background: #FFFFFF; color: #161922; overflow: hidden; }
+.sales-avatar img { width: 100%; height: 100%; object-fit: contain; }
 .sales-agent-head strong { display: block; font-size: 14px; }
 .sales-agent-head span { display: flex; align-items: center; gap: 6px; margin-top: 5px; font-size: 10px; opacity: .9; }
 .sales-agent-head span i { width: 7px; height: 7px; border-radius: 50%; background: #4C888C; }
 .sales-agent-head button { align-self: start; border: 0; background: transparent; color: #161922; font-size: 23px; cursor: pointer; }
-.sales-agent-body { padding: 22px; background: #93D1DE; }
+.sales-agent-body { padding: 22px; background: #FFFFFF; }
 .sales-message { background: #5D8693; border-radius: 2px 12px 12px 12px; padding: 13px 15px; margin-right: 24px; box-shadow: 0 4px 16px #16192230; }
 .sales-message p { margin: 0 0 4px; color: #161922; font-size: 13px; line-height: 1.45; }
 .sales-message p:last-child { margin-bottom: 0; font-weight: 800; }

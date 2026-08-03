@@ -57,7 +57,9 @@ export default function FloatingSiteTools() {
       {salesOpen && (
         <aside className="sales-agent" aria-label="Agente de ventas Zenttre">
           <div className="sales-agent-head">
-            <div className="sales-avatar">Z</div>
+            <div className="sales-avatar">
+              <img src="/images/sales-agent-zenttre.jpg" alt="" aria-hidden="true" />
+            </div>
             <div>
               <strong>Agente Zenttre</strong>
               <span><i /> En línea</span>
