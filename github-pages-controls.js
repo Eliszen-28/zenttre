@@ -36,6 +36,38 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
   let agent = null;
   let selectedService = "";
+  let people = "";
+
+  const asksForPeople = () =>
+    selectedService === "Oficina equipada" || selectedService === "Sala de juntas";
+
+  const updateWhatsAppLink = () => {
+    if (!agent) return;
+    const whatsapp = agent.querySelector(".sales-email");
+    const routingMessage = agent.querySelector(".sales-routing-message");
+    const canContinue = Boolean(selectedService) && (!asksForPeople() || Number(people) > 0);
+
+    routingMessage.hidden = !canContinue;
+    if (!canContinue) {
+      whatsapp.removeAttribute("href");
+      whatsapp.removeAttribute("target");
+      whatsapp.removeAttribute("rel");
+      whatsapp.classList.remove("ready");
+      whatsapp.setAttribute("aria-disabled", "true");
+      whatsapp.innerHTML = `<span>◉</span>${selectedService ? "Indica el número de personas" : "Selecciona un servicio"}`;
+      return;
+    }
+
+    const message = `¡Hola! Nos da mucho gusto recibir tu mensaje. Me interesa ${selectedService.toLowerCase()}${
+      asksForPeople() ? ` para ${people} ${Number(people) === 1 ? "persona" : "personas"}` : ""
+    }. Entiendo que mi solicitud será canalizada al área de ventas.`;
+    whatsapp.href = `https://wa.me/525579250612?text=${encodeURIComponent(message)}`;
+    whatsapp.target = "_blank";
+    whatsapp.rel = "noopener noreferrer";
+    whatsapp.classList.add("ready");
+    whatsapp.setAttribute("aria-disabled", "false");
+    whatsapp.innerHTML = "<span>◉</span>Continuar en WhatsApp Business";
+  };
 
   const closeAgent = () => {
     agent?.remove();
@@ -63,8 +95,13 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="sales-options">
           ${services.map((service) => `<button type="button" data-service="${service}"><span>→</span>${service}</button>`).join("")}
         </div>
-        <a class="sales-email" aria-disabled="true"><span>✉</span>Selecciona un servicio</a>
-        <small>Te conectaremos con un asesor de ventas.</small>
+        <div class="sales-people" hidden>
+          <label for="sales-people-count"></label>
+          <input id="sales-people-count" type="number" min="1" inputmode="numeric" placeholder="Número de personas">
+        </div>
+        <div class="sales-routing-message" role="status" hidden>Nos da mucho gusto recibir tu mensaje. Tu solicitud será canalizada al área de ventas.</div>
+        <a class="sales-email" aria-disabled="true"><span>◉</span>Selecciona un servicio</a>
+        <small>Te conectaremos con nuestra área de ventas.</small>
       </div>`;
 
     document.body.appendChild(agent);
@@ -73,20 +110,30 @@ document.addEventListener("DOMContentLoaded", () => {
     launcher.innerHTML = "<span>×</span><b>Cerrar</b>";
 
     agent.querySelector(".sales-agent-head button")?.addEventListener("click", closeAgent);
-    const email = agent.querySelector(".sales-email");
+    const peopleBox = agent.querySelector(".sales-people");
+    const peopleLabel = peopleBox.querySelector("label");
+    const peopleInput = peopleBox.querySelector("input");
+
+    peopleInput.addEventListener("input", () => {
+      people = peopleInput.value;
+      updateWhatsAppLink();
+    });
 
     agent.querySelectorAll("[data-service]").forEach((button) => {
       button.addEventListener("click", () => {
         selectedService = button.dataset.service;
+        people = "";
+        peopleInput.value = "";
         agent.querySelectorAll("[data-service]").forEach((item) => {
           item.classList.toggle("selected", item === button);
           item.querySelector("span").textContent = item === button ? "✓" : "→";
         });
-        const message = `Hola, me interesa recibir información sobre ${selectedService}. ¿Podrían ayudarme?`;
-        email.href = `mailto:mensajes@zenttre.com?subject=${encodeURIComponent(`Información sobre ${selectedService}`)}&body=${encodeURIComponent(message)}`;
-        email.classList.add("ready");
-        email.setAttribute("aria-disabled", "false");
-        email.innerHTML = "<span>✉</span>Continuar por correo";
+        peopleBox.hidden = !asksForPeople();
+        if (asksForPeople()) {
+          peopleLabel.textContent = `¿Para cuántas personas buscas ${selectedService === "Sala de juntas" ? "la sala de juntas" : "la oficina"}?`;
+          peopleInput.focus();
+        }
+        updateWhatsAppLink();
       });
     });
   };
