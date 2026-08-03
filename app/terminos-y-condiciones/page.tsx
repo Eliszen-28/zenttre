@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import SocialLinks from "../components/SocialLinks";
+import ClientAccessLink from "../components/ClientAccessLink";
 
 export const metadata: Metadata = {
   title: "Términos y Condiciones",
@@ -21,6 +22,7 @@ export default function TerminosYCondicionesPage() {
           <a href="/salas-de-juntas">Salas de juntas</a>
           <a href="/domicilio-fiscal-comercial">Domicilio fiscal</a>
         </nav>
+        <ClientAccessLink />
         <a className="header-cta" href="mailto:mensajes@zenttre.com">
           Contactar <span>→</span>
         </a>

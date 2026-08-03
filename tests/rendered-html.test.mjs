@@ -50,3 +50,14 @@ test("publishes crawl controls and a complete sitemap", async () => {
   assert.match(sitemap, /https:\/\/zenttre\.mx\/salas-de-juntas\//);
   assert.match(sitemap, /https:\/\/zenttre\.mx\/domicilio-fiscal-comercial\//);
 });
+
+test("renders client access and collision-safe mobile controls", async () => {
+  const response = await render();
+  const html = await response.text();
+  const css = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
+
+  assert.match(html, /ec2-34-208-182-159\.us-west-2\.compute\.amazonaws\.com:4000\/#\/login/);
+  assert.match(html, /Acceso a/);
+  assert.match(css, /\.back-to-top\s*\{[^}]*width:\s*48px/i);
+  assert.match(css, /safe-area-inset-bottom/);
+});

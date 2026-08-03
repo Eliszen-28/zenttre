@@ -2,6 +2,7 @@
 
 import { FormEvent, useState } from "react";
 import SocialLinks from "./components/SocialLinks";
+import ClientAccessLink from "./components/ClientAccessLink";
 
 const gallery = [
   "/images/01.jpg",
@@ -31,6 +32,7 @@ export default function Home() {
           <a href="/salas-de-juntas" onClick={() => setMenuOpen(false)}>Salas de juntas</a>
           <a href="/domicilio-fiscal-comercial" onClick={() => setMenuOpen(false)}>Domicilio fiscal</a>
         </nav>
+        <ClientAccessLink />
         <a className="header-cta" href="#contacto">Cotiza tu espacio <span>→</span></a>
         <button
           className="menu-button"

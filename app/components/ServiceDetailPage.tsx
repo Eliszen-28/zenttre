@@ -1,4 +1,5 @@
 import SocialLinks from "./SocialLinks";
+import ClientAccessLink from "./ClientAccessLink";
 
 type Highlight = {
   value: string;
@@ -82,6 +83,7 @@ export default function ServiceDetailPage({
           <a href="/salas-de-juntas">Salas de juntas</a>
           <a href="/domicilio-fiscal-comercial">Domicilio fiscal</a>
         </nav>
+        <ClientAccessLink />
         <a className="header-cta" href={email}>
           Contactar <span>→</span>
         </a>
