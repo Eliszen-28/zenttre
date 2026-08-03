@@ -13,6 +13,7 @@ export default function FloatingSiteTools() {
   const [salesOpen, setSalesOpen] = useState(false);
   const [salesService, setSalesService] = useState("");
   const [people, setPeople] = useState("");
+  const [extraMessage, setExtraMessage] = useState("");
 
   useEffect(() => {
     const footer = document.querySelector("footer");
@@ -37,7 +38,9 @@ export default function FloatingSiteTools() {
   const canContinue = Boolean(salesService) && (!asksForPeople || Number(people) > 0);
   const whatsappMessage = `¡Hola! Nos da mucho gusto recibir tu mensaje. Me interesa ${salesService.toLowerCase()}${
     asksForPeople ? ` para ${people} ${Number(people) === 1 ? "persona" : "personas"}` : ""
-  }. Entiendo que mi solicitud será canalizada al área de ventas.`;
+  }. Entiendo que mi solicitud será canalizada al área de ventas.${
+    extraMessage.trim() ? `\n\nMensaje adicional: ${extraMessage.trim()}` : ""
+  }`;
   const whatsappUrl = `https://wa.me/525579250612?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
@@ -99,6 +102,17 @@ export default function FloatingSiteTools() {
                 />
               </div>
             )}
+
+            <div className="sales-extra-message">
+              <label htmlFor="sales-extra-message">¿Necesitas preguntarnos algo más? <span>(opcional)</span></label>
+              <textarea
+                id="sales-extra-message"
+                rows={3}
+                value={extraMessage}
+                onChange={(event) => setExtraMessage(event.target.value)}
+                placeholder="Escribe aquí tu mensaje"
+              />
+            </div>
 
             {canContinue && (
               <div className="sales-routing-message" role="status">
