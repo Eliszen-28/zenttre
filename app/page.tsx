@@ -56,7 +56,7 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-image">
-          <img src="/images/home-hero-arbol-zenttre.jpeg" alt="Patio arbolado de las oficinas Zenttre" />
+          <img src="/images/home-hero-zenttre-del-valle.jpg" alt="Patio arbolado de las oficinas Zenttre en la Colonia del Valle" />
           <div className="hero-note">
             <span className="pulse" />
             <p><strong>Oficinas disponibles</strong><br />Listas para trabajar</p>
