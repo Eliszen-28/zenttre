@@ -40,10 +40,10 @@ main { overflow: hidden; }
 }
 .client-access {
   min-height: 46px; padding: 0 20px; display: inline-flex; align-items: center; justify-content: center;
-  border-radius: 3px; color: var(--white); background: var(--link);
+  border-radius: 3px; color: #626262; background: #93d0df;
   font-size: 12px; font-weight: 900; white-space: nowrap; transition: .2s ease;
 }
-.client-access:hover { background: var(--heading); color: var(--white); transform: translateY(-1px); }
+.client-access:hover { background: #93d0df; color: #626262; filter: brightness(.96); transform: translateY(-1px); }
 .header-cta {
   min-height: 46px; padding: 0 20px; display: flex; align-items: center; gap: 18px;
   color: var(--button-text); background: var(--lime); font-size: 13px; font-weight: 800; border-radius: 3px;

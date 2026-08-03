@@ -62,7 +62,7 @@ test("renders client access and collision-safe mobile controls", async () => {
   assert.match(html, /src="\/thenewworkexperience\.jpg"/);
   assert.doesNotMatch(html, /La oficina que se adapta a tu negocio/);
   assert.match(css, /\.client-access-zone\s*\{[^}]*background:\s*var\(--white\)/i);
-  assert.match(css, /\.client-access\s*\{[^}]*background:\s*var\(--link\)/i);
+  assert.match(css, /\.client-access\s*\{[^}]*color:\s*#626262[^}]*background:\s*#93d0df/i);
   assert.match(css, /\.back-to-top\s*\{[^}]*width:\s*48px/i);
   assert.match(css, /safe-area-inset-bottom/);
 });
