@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let agent = null;
   let selectedService = "";
   let people = "";
+  let extraMessage = "";
 
   const asksForPeople = () =>
     selectedService === "Oficina equipada" || selectedService === "Sala de juntas";
@@ -60,7 +61,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const message = `¡Hola! Nos da mucho gusto recibir tu mensaje. Me interesa ${selectedService.toLowerCase()}${
       asksForPeople() ? ` para ${people} ${Number(people) === 1 ? "persona" : "personas"}` : ""
-    }. Entiendo que mi solicitud será canalizada al área de ventas.`;
+    }. Entiendo que mi solicitud será canalizada al área de ventas.${
+      extraMessage.trim() ? `\n\nMensaje adicional: ${extraMessage.trim()}` : ""
+    }`;
     whatsapp.href = `https://wa.me/525579250612?text=${encodeURIComponent(message)}`;
     whatsapp.target = "_blank";
     whatsapp.rel = "noopener noreferrer";
@@ -99,6 +102,10 @@ document.addEventListener("DOMContentLoaded", () => {
           <label for="sales-people-count"></label>
           <input id="sales-people-count" type="number" min="1" inputmode="numeric" placeholder="Número de personas">
         </div>
+        <div class="sales-extra-message">
+          <label for="sales-extra-message">¿Necesitas preguntarnos algo más? <span>(opcional)</span></label>
+          <textarea id="sales-extra-message" rows="3" placeholder="Escribe aquí tu mensaje"></textarea>
+        </div>
         <div class="sales-routing-message" role="status" hidden>Nos da mucho gusto recibir tu mensaje. Tu solicitud será canalizada al área de ventas.</div>
         <a class="sales-email" aria-disabled="true"><span>◉</span>Selecciona un servicio</a>
         <small>Te conectaremos con nuestra área de ventas.</small>
@@ -113,9 +120,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const peopleBox = agent.querySelector(".sales-people");
     const peopleLabel = peopleBox.querySelector("label");
     const peopleInput = peopleBox.querySelector("input");
+    const extraMessageInput = agent.querySelector("#sales-extra-message");
 
     peopleInput.addEventListener("input", () => {
       people = peopleInput.value;
+      updateWhatsAppLink();
+    });
+    extraMessageInput.addEventListener("input", () => {
+      extraMessage = extraMessageInput.value;
       updateWhatsAppLink();
     });
 
