@@ -32,8 +32,6 @@ export default function Home() {
           <a href="/salas-de-juntas" onClick={() => setMenuOpen(false)}>Salas de juntas</a>
           <a href="/domicilio-fiscal-comercial" onClick={() => setMenuOpen(false)}>Domicilio fiscal</a>
         </nav>
-        <ClientAccessLink />
-        <a className="header-cta" href="#contacto">Cotiza tu espacio <span>→</span></a>
         <button
           className="menu-button"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -42,6 +40,7 @@ export default function Home() {
         >
           {menuOpen ? "×" : "☰"}
         </button>
+        <ClientAccessLink />
       </header>
 
       <section className="hero" id="inicio">
@@ -235,8 +234,7 @@ export default function Home() {
       </section>
 
       <section className="quote-strip">
-        <p>“La oficina que se adapta a tu negocio, no al revés.”</p>
-        <span>ZENTTRE · OFICINAS A LA MEDIDA</span>
+        <img src="/thenewwork.png" alt="The new work experience" />
       </section>
 
       <section className="contact section-pad" id="contacto">

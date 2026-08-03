@@ -84,9 +84,6 @@ export default function ServiceDetailPage({
           <a href="/domicilio-fiscal-comercial">Domicilio fiscal</a>
         </nav>
         <ClientAccessLink />
-        <a className="header-cta" href={email}>
-          Contactar <span>→</span>
-        </a>
       </header>
 
       <section className="detail-hero">

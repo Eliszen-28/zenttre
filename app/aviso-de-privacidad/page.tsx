@@ -23,9 +23,6 @@ export default function AvisoDePrivacidadPage() {
           <a href="/domicilio-fiscal-comercial">Domicilio fiscal</a>
         </nav>
         <ClientAccessLink />
-        <a className="header-cta" href="mailto:mensajes@zenttre.com">
-          Contactar <span>→</span>
-        </a>
       </header>
 
       <section className="privacy-hero">
