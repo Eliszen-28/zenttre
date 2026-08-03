@@ -103,7 +103,10 @@ export default function RootLayout({
               email: "mensajes@zenttre.com",
               priceRange: "$$",
               hasMap: googleMapsUrl,
-              sameAs: [googleMapsUrl],
+              sameAs: [
+                "https://www.facebook.com/zenttreOficinas",
+                "https://www.instagram.com/web.zenttre.mx",
+              ],
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "Aniceto Ortega 817",

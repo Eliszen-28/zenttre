@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import SocialLinks from "./components/SocialLinks";
 
 const gallery = [
   "/images/01.jpg",
@@ -336,6 +337,7 @@ export default function Home() {
         </div>
         <div className="footer-bottom">
           <span>© Zenttre 2026</span>
+          <SocialLinks />
           <a href="/aviso-de-privacidad">Aviso de privacidad</a>
           <a href="/terminos-y-condiciones">Términos y condiciones</a>
           <span>Made with love by <a href="https://www.zooule.com" target="_blank" rel="noreferrer">Zooule</a></span>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import SocialLinks from "../components/SocialLinks";
 
 export const metadata: Metadata = {
   title: "Aviso de Privacidad Integral",
@@ -272,6 +273,7 @@ export default function AvisoDePrivacidadPage() {
         </div>
         <div className="footer-bottom">
           <span>© Zenttre 2026</span>
+          <SocialLinks />
           <span>Made with love by <a href="https://www.zooule.com" target="_blank" rel="noreferrer">Zooule</a></span>
           <a href="/">Volver al inicio ↑</a>
         </div>
