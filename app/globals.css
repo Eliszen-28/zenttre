@@ -222,7 +222,7 @@ footer { background: var(--sky); border-top: 1px solid #70b4c1; padding: 75px 8v
 .sales-agent-head span i { width: 7px; height: 7px; border-radius: 50%; background: #4C888C; }
 .sales-agent-head button { align-self: start; border: 0; background: transparent; color: #161922; font-size: 23px; cursor: pointer; }
 .sales-agent-body { padding: 22px; background: #FFFFFF; }
-.sales-message { background: #5D8693; border-radius: 2px 12px 12px 12px; padding: 13px 15px; margin-right: 24px; box-shadow: 0 4px 16px #16192230; }
+.sales-message { background: #CCDC4B; border-radius: 2px 12px 12px 12px; padding: 13px 15px; margin-right: 24px; box-shadow: 0 4px 16px #16192230; }
 .sales-message p { margin: 0 0 4px; color: #161922; font-size: 13px; line-height: 1.45; }
 .sales-message p:last-child { margin-bottom: 0; font-weight: 800; }
 .sales-options { display: grid; gap: 8px; margin: 17px 0; }
@@ -240,7 +240,7 @@ footer { background: var(--sky); border-top: 1px solid #70b4c1; padding: 75px 8v
 .sales-extra-message textarea { width: 100%; min-height: 76px; resize: vertical; border: 1px solid #4C888C; border-radius: 3px; background: #93D1DE; color: #161922; padding: 10px 13px; font: inherit; font-size: 14px; line-height: 1.4; }
 .sales-extra-message textarea:focus { outline: 2px solid #5D8693; outline-offset: 1px; border-color: #4C888C; }
 .sales-routing-message { margin: 0 0 15px; border-left: 4px solid #4C888C; background: #5D8693; color: #161922; padding: 11px 13px; font-size: 12px; line-height: 1.45; font-weight: 700; }
-.sales-email { min-height: 49px; padding: 0 16px; display: flex; align-items: center; justify-content: center; gap: 10px; border-radius: 3px; background: #5D8693; color: #161922; font-size: 12px; font-weight: 900; cursor: not-allowed; }
+.sales-email { min-height: 49px; padding: 0 16px; display: flex; align-items: center; justify-content: center; gap: 10px; border-radius: 3px; background: #CCDC4B; color: #161922; font-size: 12px; font-weight: 900; cursor: not-allowed; }
 .sales-email.ready { background: #4C888C; color: #161922; cursor: pointer; }
 .sales-email > span { font-size: 18px; }
 .sales-agent-body > small { display: block; margin-top: 10px; text-align: center; color: #626262; font-size: 9px; }
