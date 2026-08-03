@@ -38,7 +38,7 @@ export default function FloatingSiteTools() {
   const whatsappMessage = `¡Hola! Nos da mucho gusto recibir tu mensaje. Me interesa ${salesService.toLowerCase()}${
     asksForPeople ? ` para ${people} ${Number(people) === 1 ? "persona" : "personas"}` : ""
   }. Entiendo que mi solicitud será canalizada al área de ventas.`;
-  const whatsappUrl = `https://wa.me/525520002619?text=${encodeURIComponent(whatsappMessage)}`;
+  const whatsappUrl = `https://wa.me/525579250612?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
     <>

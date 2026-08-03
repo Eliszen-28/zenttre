@@ -229,6 +229,7 @@ footer { background: var(--sky); border-top: 1px solid #70b4c1; padding: 75px 8v
 .sales-options button:hover, .sales-options button.selected { border-color: var(--teal); background: #e9f5f6; }
 .sales-options button span { color: var(--teal); font-size: 13px; }
 .sales-people { display: grid; gap: 8px; margin: -3px 0 17px; }
+.sales-people[hidden], .sales-routing-message[hidden] { display: none; }
 .sales-people label { color: var(--ink); font-size: 13px; line-height: 1.4; font-weight: 800; }
 .sales-people input { width: 100%; min-height: 46px; border: 1px solid #c5dadd; border-radius: 3px; background: var(--white); color: var(--ink); padding: 0 13px; font: inherit; font-size: 14px; }
 .sales-people input:focus { outline: 2px solid var(--lime); outline-offset: 1px; border-color: var(--teal); }
