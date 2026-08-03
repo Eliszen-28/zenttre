@@ -234,7 +234,7 @@ export default function Home() {
       </section>
 
       <section className="quote-strip">
-        <img src="/thenewwork.png" alt="The new work experience" />
+        <img src="/thenewworkexperience.jpg" alt="The new work experience" />
       </section>
 
       <section className="contact section-pad" id="contacto">

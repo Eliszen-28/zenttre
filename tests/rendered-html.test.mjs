@@ -59,7 +59,7 @@ test("renders client access and collision-safe mobile controls", async () => {
   assert.match(html, /ec2-34-208-182-159\.us-west-2\.compute\.amazonaws\.com:4000\/#\/login/);
   assert.match(html, /Acceso a/);
   assert.doesNotMatch(html, /Cotiza tu espacio/);
-  assert.match(html, /src="\/thenewwork\.png"/);
+  assert.match(html, /src="\/thenewworkexperience\.jpg"/);
   assert.doesNotMatch(html, /La oficina que se adapta a tu negocio/);
   assert.match(css, /\.client-access-zone\s*\{[^}]*background:\s*var\(--white\)/i);
   assert.match(css, /\.client-access\s*\{[^}]*background:\s*var\(--link\)/i);
