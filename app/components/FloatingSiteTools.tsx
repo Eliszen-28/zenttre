@@ -51,7 +51,7 @@ export default function FloatingSiteTools() {
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         aria-label="Volver al inicio de la página"
       >
-        <span>↑</span> Back to top
+        <span aria-hidden="true">↑</span>
       </button>
 
       {salesOpen && (

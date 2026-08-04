@@ -67,3 +67,13 @@ test("renders client access and collision-safe mobile controls", async () => {
   assert.match(css, /\.back-to-top\s*\{[^}]*width:\s*48px/i);
   assert.match(css, /safe-area-inset-bottom/);
 });
+
+test("protects the contact form with a captcha and keeps back to top icon-only", async () => {
+  const response = await render();
+  const html = await response.text();
+
+  assert.match(html, /id="contact-captcha"/);
+  assert.match(html, /Verificación de seguridad: ¿cuánto es 4 \+ 5\?/);
+  assert.match(html, /aria-label="Volver al inicio de la página"/);
+  assert.doesNotMatch(html, /> Back to top/);
+});

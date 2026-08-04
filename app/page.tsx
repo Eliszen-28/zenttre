@@ -14,9 +14,16 @@ const gallery = [
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [sent, setSent] = useState(false);
+  const [captchaAnswer, setCaptchaAnswer] = useState("");
+  const [captchaError, setCaptchaError] = useState(false);
 
   function submitContact(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    if (captchaAnswer.trim() !== "9") {
+      setCaptchaError(true);
+      return;
+    }
+    setCaptchaError(false);
     setSent(true);
   }
 
@@ -276,6 +283,26 @@ export default function Home() {
               </label>
               <label>Mensaje<textarea name="message" rows={3} placeholder="Cuéntanos qué espacio necesitas" /></label>
               <label className="privacy"><input type="checkbox" required /> Acepto el aviso de privacidad.</label>
+              <div className="captcha-field">
+                <label htmlFor="contact-captcha">Verificación de seguridad: ¿cuánto es 4 + 5?</label>
+                <input
+                  id="contact-captcha"
+                  name="captcha"
+                  type="text"
+                  inputMode="numeric"
+                  autoComplete="off"
+                  required
+                  value={captchaAnswer}
+                  onChange={(event) => {
+                    setCaptchaAnswer(event.target.value);
+                    if (captchaError) setCaptchaError(false);
+                  }}
+                  aria-invalid={captchaError}
+                  aria-describedby={captchaError ? "captcha-error" : undefined}
+                  placeholder="Escribe el resultado"
+                />
+                {captchaError && <p className="captcha-error" id="captcha-error" role="alert">La respuesta de seguridad no es correcta.</p>}
+              </div>
               <button className="button primary submit" type="submit">Quiero recibir información <span>↗</span></button>
             </>
           )}
