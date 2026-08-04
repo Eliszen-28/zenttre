@@ -1,4 +1,36 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const contactForm = document.querySelector(".contact-form");
+  contactForm?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const captchaInput = contactForm.querySelector("#contact-captcha");
+    let captchaError = contactForm.querySelector("#captcha-error");
+    if (captchaInput?.value.trim() !== "9") {
+      if (!captchaError) {
+        captchaError = document.createElement("p");
+        captchaError.id = "captcha-error";
+        captchaError.className = "captcha-error";
+        captchaError.setAttribute("role", "alert");
+        captchaError.textContent = "La respuesta de seguridad no es correcta.";
+        captchaInput?.insertAdjacentElement("afterend", captchaError);
+      }
+      captchaInput?.setAttribute("aria-invalid", "true");
+      captchaInput?.focus();
+      return;
+    }
+
+    const data = new FormData(contactForm);
+    const subject = encodeURIComponent(`Solicitud desde zenttre.mx: ${data.get("service") || "Información"}`);
+    const body = encodeURIComponent([
+      `Nombre: ${data.get("name") || ""}`,
+      `Teléfono: ${data.get("phone") || ""}`,
+      `Correo: ${data.get("email") || ""}`,
+      `Servicio: ${data.get("service") || "No especificado"}`,
+      "",
+      `Mensaje: ${data.get("message") || "Sin mensaje adicional"}`,
+    ].join("\n"));
+    window.location.href = `mailto:mensajes@zenttre.com?subject=${subject}&body=${body}`;
+  });
+
   const footer = document.querySelector("footer");
   if (footer) {
     const footerObserver = new IntersectionObserver(

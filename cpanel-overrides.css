@@ -1,0 +1,22 @@
+.website-field {
+  position: absolute !important;
+  left: -10000px !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+}
+
+.contact-status {
+  margin: 0 0 24px;
+  border-left: 5px solid #ccdc4b;
+  background: #eef6f7;
+  color: #161922;
+  padding: 16px 18px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.contact-status.error {
+  border-left-color: #5d8693;
+}
