@@ -71,9 +71,12 @@ test("renders client access and collision-safe mobile controls", async () => {
 test("protects the contact form with a captcha and keeps back to top icon-only", async () => {
   const response = await render();
   const html = await response.text();
+  const css = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
 
   assert.match(html, /id="contact-captcha"/);
   assert.match(html, /Verificación de seguridad: ¿cuánto es 4 \+ 5\?/);
   assert.match(html, /aria-label="Volver al inicio de la página"/);
   assert.doesNotMatch(html, /> Back to top/);
+  assert.match(css, /\.back-to-top::before\s*\{[^}]*border-top:\s*4px solid var\(--lime\)/i);
+  assert.match(css, /\.back-to-top::after\s*\{[^}]*width:\s*4px/i);
 });

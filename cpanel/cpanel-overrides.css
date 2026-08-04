@@ -20,3 +20,34 @@
 .contact-status.error {
   border-left-color: #5d8693;
 }
+
+.back-to-top {
+  width: 48px !important;
+  min-width: 48px !important;
+  height: 48px !important;
+  min-height: 48px !important;
+  padding: 0 !important;
+  font-size: 0 !important;
+  overflow: hidden;
+}
+
+.back-to-top span { display: none !important; }
+
+.back-to-top::before {
+  content: "";
+  position: absolute;
+  top: 13px;
+  width: 14px;
+  height: 14px;
+  border-top: 4px solid #ccdc4b;
+  border-left: 4px solid #ccdc4b;
+  transform: rotate(45deg);
+}
+
+.back-to-top::after {
+  content: "";
+  width: 4px;
+  height: 23px;
+  border-radius: 3px;
+  background: #ccdc4b;
+}
