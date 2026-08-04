@@ -41,7 +41,7 @@ export default function FloatingSiteTools() {
   }. Entiendo que mi solicitud será canalizada al área de ventas.${
     extraMessage.trim() ? `\n\nMensaje adicional: ${extraMessage.trim()}` : ""
   }`;
-  const whatsappUrl = `https://wa.me/525579250612?text=${encodeURIComponent(whatsappMessage)}`;
+  const whatsappUrl = `https://wa.me/525545301601?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
     <>
