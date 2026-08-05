@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }. Entiendo que mi solicitud será canalizada al área de ventas.${
       extraMessage.trim() ? `\n\nMensaje adicional: ${extraMessage.trim()}` : ""
     }`;
-    whatsapp.href = `https://wa.me/525545301601?text=${encodeURIComponent(message)}`;
+    whatsapp.href = `https://wa.me/525543501601?text=${encodeURIComponent(message)}`;
     whatsapp.target = "_blank";
     whatsapp.rel = "noopener noreferrer";
     whatsapp.classList.add("ready");
