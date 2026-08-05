@@ -66,6 +66,8 @@ test("renders client access and collision-safe mobile controls", async () => {
   assert.match(css, /\.client-access\s*\{[^}]*color:\s*#626262[^}]*background:\s*#93d0df/i);
   assert.match(css, /\.back-to-top\s*\{[^}]*width:\s*48px/i);
   assert.match(css, /safe-area-inset-bottom/);
+  const floatingTools = await readFile(new URL("../app/components/FloatingSiteTools.tsx", import.meta.url), "utf8");
+  assert.match(floatingTools, /https:\/\/wa\.me\/525543501601/);
 });
 
 test("protects the contact form with a captcha and keeps back to top icon-only", async () => {
