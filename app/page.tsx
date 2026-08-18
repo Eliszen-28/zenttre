@@ -144,7 +144,14 @@ export default function Home() {
             </div>
             <div className="solution-actions">
               <a className="button primary" href="/salas-de-juntas">Ver capacidades y precios <span>↗</span></a>
-              <a className="text-link" href="mailto:mensajes@zenttre.com?subject=Disponibilidad%20de%20salas%20de%20juntas">Consultar disponibilidad →</a>
+              <a
+                className="text-link"
+                href="#agente-de-ventas"
+                data-open-sales-agent
+                data-sales-service="Sala de juntas"
+              >
+                Consultar disponibilidad →
+              </a>
             </div>
           </div>
         </article>

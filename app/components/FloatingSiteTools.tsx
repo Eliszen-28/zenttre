@@ -34,6 +34,33 @@ export default function FloatingSiteTools() {
     };
   }, []);
 
+  useEffect(() => {
+    const openFromAvailabilityButton = (event: MouseEvent) => {
+      const trigger = (event.target as HTMLElement).closest<HTMLElement>(
+        "[data-open-sales-agent]",
+      );
+      if (!trigger) return;
+
+      event.preventDefault();
+      const requestedService = trigger.dataset.salesService || "";
+      const normalizedService = requestedService.toLowerCase();
+      const matchingService = normalizedService.startsWith("oficina")
+        ? "Oficina equipada"
+        : normalizedService.startsWith("sala")
+          ? "Sala de juntas"
+          : salesOptions.find((option) =>
+              normalizedService.includes(option.toLowerCase()),
+            );
+      setSalesService(matchingService || "");
+      setPeople("");
+      setExtraMessage("");
+      setSalesOpen(true);
+    };
+
+    document.addEventListener("click", openFromAvailabilityButton);
+    return () => document.removeEventListener("click", openFromAvailabilityButton);
+  }, []);
+
   const asksForPeople = salesService === "Oficina equipada" || salesService === "Sala de juntas";
   const canContinue = Boolean(salesService) && (!asksForPeople || Number(people) > 0);
   const whatsappMessage = `¡Hola! Nos da mucho gusto recibir tu mensaje. Me interesa ${salesService.toLowerCase()}${

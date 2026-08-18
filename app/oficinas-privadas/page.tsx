@@ -3,7 +3,7 @@ import ServiceDetailPage from "../components/ServiceDetailPage";
 
 export const metadata: Metadata = {
   title: "Oficinas equipadas en Colonia del Valle, CDMX",
-  description: "Renta oficinas privadas equipadas para 1 a 7 personas en la Colonia del Valle. Acceso 24/7, Wi-Fi, mobiliario y servicios incluidos desde $5,000 + IVA.",
+  description: "Renta oficinas privadas equipadas para 1 a 7 personas en la Colonia del Valle. Acceso 24/7, Wi-Fi, mobiliario y servicios incluidos desde $6,500 + IVA.",
   alternates: { canonical: "/oficinas-privadas/" },
   openGraph: { title: "Oficinas equipadas en Colonia del Valle | Zenttre", description: "Oficinas privadas listas para trabajar en CDMX, con servicios incluidos y acceso 24/7.", url: "/oficinas-privadas/" },
 };
@@ -21,7 +21,7 @@ export default function OficinasPrivadasPage() {
       highlights={[
         { value: "1 - 7", label: "personas por oficina" },
         { value: "24/7", label: "los 365 días del año" },
-        { value: "Desde $5,000", label: "mensuales + IVA" },
+        { value: "Desde $6,500", label: "mensuales + IVA" },
       ]}
       sectionTitle="Un espacio para tu empresa donde el profesionalismo y"
       sectionItalic="tu crecimiento son primordiales."
@@ -34,7 +34,7 @@ export default function OficinasPrivadasPage() {
       ]}
       plans={[
         { eyebrow: "OFICINA EQUIPADA", title: "Oficina", description: "Oficina cómoda para 7 personas aprox.", details: ["32m²", "Aire acondicionado", "Conexiones múltiples para los equipos", "Wifi, agua y limpieza incluidos", "Bono mensual de salas $2,500"], price: "Mensuales $25,500 + IVA." },
-        { eyebrow: "OFICINA EQUIPADA", title: "Oficina 205", description: "Oficina cómoda para 3 personas", details: ["6.6m²", "Wifi gratis", "Bono mensual de salas $1,200"], price: "Mensuales $5,000 + IVA." },
+        { eyebrow: "OFICINA EQUIPADA", title: "Oficina 205", description: "Oficina cómoda para 3 personas", details: ["6.6m²", "Wifi gratis", "Bono mensual de salas $1,200"], price: "Mensuales $6,500 + IVA." },
       ]}
       footnotes={["Los servicios de bebidas, copiado, impresiones y escaneo tienen costo adicional.", "HDMI está disponible en salas con pantalla."]}
     />

@@ -160,7 +160,13 @@ export default function ServiceDetailPage({
                 )}
                 {plan.price && <strong>{plan.price}</strong>}
                 {plan.notice && <p className="detail-plan-notice">{plan.notice}</p>}
-                <a href={email}>Consultar disponibilidad <span>↗</span></a>
+                <a
+                  href="#agente-de-ventas"
+                  data-open-sales-agent
+                  data-sales-service={serviceName}
+                >
+                  Consultar disponibilidad <span>↗</span>
+                </a>
               </article>
             ))}
           </div>
