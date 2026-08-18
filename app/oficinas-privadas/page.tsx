@@ -34,7 +34,7 @@ export default function OficinasPrivadasPage() {
       ]}
       plans={[
         { eyebrow: "OFICINA EQUIPADA", title: "Sala 301", description: "Oficina cómoda para 7 personas aprox.", details: ["32m²", "Aire acondicionado", "Conexiones múltiples para los equipos", "Wifi, agua y limpieza incluidos", "Bono mensual de salas $2,500"], price: "Mensuales $25,500 + IVA." },
-        { eyebrow: "OFICINA EQUIPADA", title: "Oficina 205", description: "Oficina cómoda para 3 personas", details: ["6.6m²", "Wifi gratis", "Bono mensual de salas $1,200"], price: "Mensuales $6,500 + IVA." },
+        { eyebrow: "OFICINA EQUIPADA", title: "Oficina 406", description: "Oficina cómoda para 3 personas", details: ["6.6m²", "Wifi gratis", "Bono mensual de salas $1,200"], price: "Mensuales $6,500 + IVA." },
       ]}
       footnotes={["Los servicios de bebidas, copiado, impresiones y escaneo tienen costo adicional.", "HDMI está disponible en salas con pantalla."]}
     />
