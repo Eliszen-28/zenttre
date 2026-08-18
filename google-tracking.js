@@ -1,6 +1,17 @@
 (function () {
+  var adsConversionDestination = "AW-979193174/8vmUCITInfMBENaa9dID";
   window.dataLayer = window.dataLayer || [];
   window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+
+  function trackLead(method, details, isPrimaryConversion) {
+    window.gtag("event", "generate_lead", Object.assign({ method: method }, details || {}));
+
+    if (isPrimaryConversion) {
+      window.gtag("event", "conversion", {
+        send_to: adsConversionDestination,
+      });
+    }
+  }
 
   document.addEventListener("click", function (event) {
     var link = event.target.closest && event.target.closest("a[href]");
@@ -16,8 +27,7 @@
           : "";
 
     if (method) {
-      window.gtag("event", "generate_lead", {
-        method: method,
+      trackLead(method, {
         link_url: href.split("?")[0],
       });
     }
@@ -25,6 +35,10 @@
 
   var status = new URLSearchParams(window.location.search).get("contact");
   if (status === "success") {
-    window.gtag("event", "generate_lead", { method: "contact_form" });
+    var storageKey = "zenttre_ads_form_conversion";
+    if (!window.sessionStorage.getItem(storageKey)) {
+      trackLead("contact_form", { form_name: "Formulario contacto general" }, true);
+      window.sessionStorage.setItem(storageKey, "1");
+    }
   }
 })();

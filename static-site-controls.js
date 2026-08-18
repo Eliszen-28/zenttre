@@ -1,10 +1,38 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const menuButton = document.querySelector(".menu-button");
+  const mainNav = document.querySelector(".site-header .nav");
+  if (menuButton && mainNav) {
+    menuButton.addEventListener("click", () => {
+      const isOpen = mainNav.classList.toggle("open");
+      menuButton.setAttribute("aria-expanded", String(isOpen));
+      menuButton.textContent = isOpen ? "×" : "☰";
+    });
+  }
+
   const contactForm = document.querySelector(".contact-form");
+  const contactStatus = new URLSearchParams(window.location.search).get("contact");
+  if (contactForm && contactStatus) {
+    const messages = {
+      success: "Gracias por escribirnos. Tu mensaje fue enviado al equipo de Zenttre.",
+      invalid: "Revisa los campos y la respuesta de seguridad antes de enviar el formulario.",
+      "rate-limit": "Espera unos segundos antes de enviar otro mensaje.",
+      "mail-error": "No fue posible enviar el mensaje. Escríbenos directamente a mensajes@zenttre.com.",
+    };
+    const statusMessage = messages[contactStatus];
+    if (statusMessage) {
+      const statusBox = document.createElement("div");
+      statusBox.className = `contact-status${contactStatus === "success" ? "" : " error"}`;
+      statusBox.setAttribute("role", contactStatus === "success" ? "status" : "alert");
+      statusBox.textContent = statusMessage;
+      contactForm.prepend(statusBox);
+    }
+  }
+
   contactForm?.addEventListener("submit", (event) => {
-    event.preventDefault();
     const captchaInput = contactForm.querySelector("#contact-captcha");
     let captchaError = contactForm.querySelector("#captcha-error");
     if (captchaInput?.value.trim() !== "9") {
+      event.preventDefault();
       if (!captchaError) {
         captchaError = document.createElement("p");
         captchaError.id = "captcha-error";
@@ -14,21 +42,9 @@ document.addEventListener("DOMContentLoaded", () => {
         captchaInput?.insertAdjacentElement("afterend", captchaError);
       }
       captchaInput?.setAttribute("aria-invalid", "true");
+      captchaInput?.setAttribute("aria-describedby", "captcha-error");
       captchaInput?.focus();
-      return;
     }
-
-    const data = new FormData(contactForm);
-    const subject = encodeURIComponent(`Solicitud desde zenttre.mx: ${data.get("service") || "Información"}`);
-    const body = encodeURIComponent([
-      `Nombre: ${data.get("name") || ""}`,
-      `Teléfono: ${data.get("phone") || ""}`,
-      `Correo: ${data.get("email") || ""}`,
-      `Servicio: ${data.get("service") || "No especificado"}`,
-      "",
-      `Mensaje: ${data.get("message") || "Sin mensaje adicional"}`,
-    ].join("\n"));
-    window.location.href = `mailto:mensajes@zenttre.com?subject=${subject}&body=${body}`;
   });
 
   const footer = document.querySelector("footer");
@@ -112,13 +128,13 @@ document.addEventListener("DOMContentLoaded", () => {
     launcher.innerHTML = "<span>◉</span><b>Agente de ventas</b><i></i>";
   };
 
-  const openAgent = () => {
+  const openAgent = (presetService = "") => {
     agent = document.createElement("aside");
     agent.className = "sales-agent";
     agent.setAttribute("aria-label", "Agente de ventas Zenttre");
     agent.innerHTML = `
       <div class="sales-agent-head">
-        <div class="sales-avatar"><img src="/zenttre/images/sales-agent-zenttre.jpg" alt="" aria-hidden="true"></div>
+        <div class="sales-avatar"><img src="/images/sales-agent-zenttre.jpg" alt="" aria-hidden="true"></div>
         <div><strong>Agente Zenttre</strong><span><i></i> En línea</span></div>
         <button type="button" aria-label="Cerrar agente de ventas">×</button>
       </div>
@@ -180,7 +196,26 @@ document.addEventListener("DOMContentLoaded", () => {
         updateWhatsAppLink();
       });
     });
+
+    if (presetService) {
+      const normalizedService = presetService.toLowerCase();
+      const matchingButton = Array.from(agent.querySelectorAll("[data-service]")).find((button) => {
+        const option = button.dataset.service.toLowerCase();
+        if (normalizedService.startsWith("oficina")) return option === "oficina equipada";
+        if (normalizedService.startsWith("sala")) return option === "sala de juntas";
+        return normalizedService.includes(option);
+      });
+      matchingButton?.click();
+    }
   };
+
+  document.addEventListener("click", (event) => {
+    const trigger = event.target.closest?.("[data-open-sales-agent]");
+    if (!trigger) return;
+    event.preventDefault();
+    if (agent) closeAgent();
+    openAgent(trigger.dataset.salesService || "");
+  });
 
   launcher.addEventListener("click", () => {
     if (agent) closeAgent();
