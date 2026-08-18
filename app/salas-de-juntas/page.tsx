@@ -39,7 +39,6 @@ export default function SalasDeJuntasPage() {
         { eyebrow: "MÁXIMO 10 PERSONAS", title: "Sala C", image: "/images/salas/sala-c.jpg", description: "Sofisticada y privada para dar presencia y confidencialidad a tus reuniones.", details: ["Wi‑Fi", "Sistema de aislamiento", "Pantalla", "Pizarrón"], price: "$280.00 por hora + IVA" },
         { eyebrow: "MÁXIMO 10 PERSONAS", title: "Sala D", image: "/images/salas/sala-d.jpg", description: "Espaciosa, con estilo ecléctico, ideal para reuniones con colaboradores.", details: ["Wi‑Fi", "Apta para consumo de alimentos y bebidas", "Pantalla", "Vista a las áreas comunes"], price: "$280.00 por hora + IVA", notice: "No disponible de lunes a viernes de 14:00 a 17:00 horas." },
         { eyebrow: "MÁXIMO 3 PERSONAS", title: "Sala B1", image: "/images/salas/sala-b1.jpg", description: "Franjas orgánicas estilo bambú para reuniones confidenciales, con estilo y frescura.", price: "$150.00 por hora + IVA" },
-        { eyebrow: "MÁXIMO 3 PERSONAS", title: "Sala B2", image: "/images/salas/sala-b2.jpg", description: "Franjas orgánicas estilo bambú para reuniones confidenciales, con estilo y frescura.", price: "$150.00 por hora + IVA" },
       ]}
       footnotes={["Los servicios de bebidas, copiado, impresiones y escaneo tienen costo adicional.", "HDMI está disponible en salas con pantalla."]}
     />
