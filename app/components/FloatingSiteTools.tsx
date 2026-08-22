@@ -179,7 +179,7 @@ export default function FloatingSiteTools() {
         type="button"
       >
         <span>{salesOpen ? "×" : "◉"}</span>
-        <b>{salesOpen ? "Cerrar" : "Agente de ventas"}</b>
+        <b>{salesOpen ? "Cerrar" : "Ventas"}</b>
         {!salesOpen && <i />}
       </button>
 
