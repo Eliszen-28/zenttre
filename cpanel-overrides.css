@@ -52,8 +52,8 @@
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background: #25d366;
-  color: #fff;
+  background: #ccdc4b;
+  color: #3f3f3f;
   display: grid;
   place-items: center;
   box-shadow: 0 10px 30px #00000030;
@@ -72,15 +72,28 @@
 
 @media (max-width: 620px) {
   .whatsapp-launcher {
-    right: 193px;
+    right: auto;
+    left: 50%;
     bottom: calc(17px + env(safe-area-inset-bottom));
     width: 48px;
     height: 48px;
+    transform: translateX(-50%);
   }
 
   .whatsapp-launcher svg {
     width: 28px;
     height: 28px;
+  }
+
+  .whatsapp-launcher:hover {
+    transform: translateX(-50%) translateY(-2px) scale(1.03);
+  }
+
+  .sales-launcher {
+    right: 15px;
+    min-width: 112px;
+    justify-content: center;
+    padding: 0 14px;
   }
 }
 

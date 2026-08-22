@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
           footerLauncher?.classList.remove("active");
           footerLauncher?.setAttribute("aria-expanded", "false");
           if (footerLauncher) {
-            footerLauncher.innerHTML = "<span>◉</span><b>Agente de ventas</b><i></i>";
+            footerLauncher.innerHTML = "<span>◉</span><b>Ventas</b><i></i>";
           }
         }
       },
@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
     agent = null;
     launcher.classList.remove("active");
     launcher.setAttribute("aria-expanded", "false");
-    launcher.innerHTML = "<span>◉</span><b>Agente de ventas</b><i></i>";
+    launcher.innerHTML = "<span>◉</span><b>Ventas</b><i></i>";
   };
 
   const openAgent = (presetService = "") => {
